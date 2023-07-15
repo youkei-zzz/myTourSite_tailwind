@@ -1,0 +1,15 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+	.light-mode-hero {
+		background-image: url('@/assets/image/light-mode-hero.png');
+	}
+	.dark-mode-hero {
+		background-image: url('@/assets/svg/dark-mode-hero.svg');
+		background-position: center;
+		background-repeat: repeat-x;
+		background-size: contain;
+	}
+}
