@@ -41,7 +41,7 @@ onMounted(() => {
 				title: '请稍等~',
 			},
 		});
-		animation.setSpeed(0.7);
+		animation.setSpeed(0.6);
 	});
 });
 

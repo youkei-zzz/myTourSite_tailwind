@@ -10,6 +10,10 @@ interface ImportMetaEnv {
 	readonly VITE_Lottie_MOON: string;
 	readonly VITE_Lottie_FIRE: string;
 	readonly VITE_Lottie_PENCIL: string;
+	readonly VITE_PERSON_QQ: string;
+	readonly VITE_PERSON_WECHAT: string;
+	readonly VITE_PERSON_MAIL: string;
+	readonly VITE_PERSON_ADDRESS: string;
 	// 更多环境变量...
 }
 

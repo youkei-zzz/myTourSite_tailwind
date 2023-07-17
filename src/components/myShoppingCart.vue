@@ -32,10 +32,14 @@
 							<img :src="product.imageSrc" :alt="product.imageAlt" class="h-16 w-16 flex-none rounded-md border border-gray-200" />
 							<div class="ml-4 flex-auto">
 								<h3 class="font-medium text-gray-900">
-									<a :href="product.href">
+									<!-- <a :href="product.href">
 										{{ product.name }}
 										<p class="text-gray-500">{{ product.color }}</p>
-									</a>
+									</a> -->
+									<router-link :to="{ name: 'Pdoverview', params: { id: product.id } }">
+										{{ product.name }}
+										<p class="text-gray-500">{{ product.color }}</p>
+									</router-link>
 								</h3>
 							</div>
 						</li>

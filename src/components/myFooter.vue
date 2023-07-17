@@ -1,7 +1,6 @@
 <template>
 	<div class="wave pt-5 relative">
-		<footer
-			class="bg-[#182f4a] bg-[url('@/assets/svg/cloud.svg')] will-change-transform  w-full bg-top bg-no-repeat bg-cover text-center pt-[15vh] px-10 text-gray-200">
+		<footer class="bg-[#182f4a] bg-[url('@/assets/svg/cloud.svg')] will-change-transform w-full bg-top bg-no-repeat bg-cover text-center pt-[15vh] px-10 text-gray-200">
 			<div class="footer_content box-border grid lg:grid-cols-3 grid-rows-1" style="">
 				<div class="sc1 prose">
 					<img src="https://i.imgtg.com/2023/05/14/OMBR5L.png" alt="TraLive icon" />
@@ -77,8 +76,8 @@
 
 				<div class="gap-10 menu text-base text-left lg:text-center md:mb-6">
 					<h2 class="footer-title">联系方式</h2>
-					<p>四川省, 成都市, 新都区, 新都大道, 8号</p>
-					<p>yangs.private@qq.com</p>
+					<p>{{ address }}</p>
+					<p>{{ mail }}</p>
 					<p>(+86)-1234567890</p>
 				</div>
 			</div>
@@ -98,6 +97,8 @@ import { reactive } from 'vue';
 import { useRouter } from 'vue-router';
 
 const router = useRouter();
+const mail = import.meta.env.VITE_PERSON_MAIL ?? '......';
+const address = import.meta.env.VITE_PERSON_ADDRESS ?? '......';
 const LogInfoStore = useLogInfoStore();
 const contactInfo = reactive({
 	title: '',
@@ -106,10 +107,10 @@ const contactInfo = reactive({
 const open = (contactType?: string) => {
 	if (contactType === 'QQ') {
 		contactInfo.title = 'QQ号';
-		contactInfo.content = '1796878595';
+		contactInfo.content = `${import.meta.env.VITE_PERSON_QQ}`;
 	} else {
 		contactInfo.title = '微信号';
-		contactInfo.content = 'Will_2024';
+		contactInfo.content = `${import.meta.env.VITE_PERSON_WECHAT}`;
 	}
 
 	swal.fire({

@@ -222,9 +222,8 @@ import {
 	XMarkIcon,
 } from '@heroicons/vue/24/outline';
 import emitter from '@utils/emitter';
-import { getCurrentInstance, h, ref, watch } from 'vue';
+import { getCurrentInstance, ref, watch } from 'vue';
 import { useRouter } from 'vue-router';
-import myShoppingCart from './myShoppingCart.vue';
 
 const router = useRouter();
 const dynamicWidth = getCurrentInstance()?.appContext.config.globalProperties.$dynamicWidth!;

@@ -112,7 +112,6 @@ import myFooter from '@components/myFooter.vue';
 import myHeader from '@components/myHeader.vue';
 import landingPage from '@components/myLandingPage.vue';
 import myPrice from '@components/myPrice.vue';
-import mySideBar from '@components/mySideBar.vue';
 import Testimony from '@components/myTestimony.vue';
 import heroBackground from '@components/myheroBackgound.vue';
 import emitter from '@utils/emitter';

@@ -82,11 +82,11 @@
 				<div class="chat-bubble">You underestimate my power!</div>
 			</div>
 
-			<div class="chat chat-end animate__animated animate__fadeInRight animate__duration-2s animate__delay-1s">
-				<div class="chat chat-end animate__animated animate__fadeInRight animate__duration-2s animate__delay-2s px-10">
+			<div class="chat chat-end animate__animated animate__fadeInRight animate__duration-1.5s">
+				<div class="chat chat-end animate__animated animate__fadeInRight animate__duration-1.5s animate__delay-1s px-10">
 					<div class="chat-bubble">You underestimate my power!</div>
 				</div>
-				<div class="chat-bubble">You underestimate my power!</div>
+				<div class="chat-bubble mt-5">You underestimate my power!</div>
 			</div>
 
 			<div>

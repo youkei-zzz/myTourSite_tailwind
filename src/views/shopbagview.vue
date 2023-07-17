@@ -39,7 +39,7 @@
 
 <script setup lang="ts">
 import MyFooter from '@/components/myFooter.vue';
-import MyHeader from '@/components/myHeader.vue';
+import MyHeader from '@components/myHeader.vue';
 import MySideBar from '@/components/mySideBar.vue';
 import swal from 'sweetalert2';
 const pay = () => {

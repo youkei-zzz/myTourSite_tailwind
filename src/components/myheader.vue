@@ -28,7 +28,7 @@
 				</ul>
 			</span>
 
-			<span class="font-bold _notif nav-item font-primary md:text-sm">
+			<span class="font-bold nav-item font-primary md:text-sm">
 				<router-link :to="{ name: '' }" class="hover:cursor-pointer">
 					<font-awesome-icon :icon="['fas', 'bullhorn']" class="pr-[1vmin]" />
 					公告

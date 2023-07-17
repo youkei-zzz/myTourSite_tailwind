@@ -5,7 +5,7 @@
 		<div class="mx-auto mt-10 px-4 py-16 sm:px-6 lg:max-w-7xl lg:px-8">
 			<div class="lg:grid lg:grid-cols-7 lg:grid-rows-1 lg:gap-x-8 lg:gap-y-10 xl:gap-x-16">
 				<div class="lg:col-span-4 lg:row-end-1">
-					<div class="aspect-h-3 aspect-w-4 overflow-hidden rounded-lg bg-gray-100">
+					<div class="imgContainer aspect-h-3 aspect-w-4 overflow-hidden rounded-lg bg-gray-100">
 						<img :src="product.imageSrc" :alt="product.imageAlt" class="object-cover object-center" />
 					</div>
 				</div>
@@ -149,19 +149,21 @@ import MyHeader from '@components/myHeader.vue';
 import MySideBar from '@components/mySideBar.vue';
 import { Tab, TabGroup, TabList, TabPanel, TabPanels } from '@headlessui/vue';
 import { StarIcon } from '@heroicons/vue/20/solid';
+import imageLoaded from 'imagesloaded';
+import { onMounted, ref } from 'vue';
 import { useRoute, useRouter } from 'vue-router';
 
+const loading = ref(true);
 const router = useRouter();
 const route = useRoute();
 const id = route.params.id;
 const product = {
-	name: `商品 ${id}`,
+	name: `马尔代夫旅游 ${id}`,
 	version: { name: '1.0', date: 'June 5, 2021', datetime: '2021-06-05' },
 	price: `￥22${id}`,
-	description:
-		'The Application UI Icon Pack comes with over 200 icons in 3 styles: outline, filled, and branded. This playful icon pack is tailored for complex application user interfaces with a friendly and legible look.',
+	description: `厌倦了城市的喧嚣？想去一个宁静的地方放松身心？那就来海岛度假吧！海岛是远离城市喧嚣的理想之地。这里有美丽的海滩、清澈的海水、温暖的阳光和友好的人们。你可以在海滩上游泳、日光浴、玩沙滩排球，也可以在海里潜水、浮潜、钓鱼。如果您喜欢冒险，您可以去丛林中徒步旅行，或者去探索海岛上的原始部落。海岛是度假的理想之地。这里有各种各样的酒店和度假村，您可以根据自己的喜好和预算选择。您也可以选择在海岛上租一间小屋，体验当地的生活。海岛是放松身心、享受美景、了解不同文化的理想之地。如果您正在寻找一个完美的度假目的地，那就来海岛吧！`,
 	highlights: ['200+ SVG icons in 3 unique styles', 'Compatible with Figma, Sketch, and Adobe XD', 'Drawn on 24 x 24 pixel grid'],
-	imageSrc: 'https://tailwindui.com/img/ecommerce-images/product-page-05-product-01.jpg',
+	imageSrc: 'https://res.cloudinary.com/dfq7ospj9/image/upload/v1684672357/samples/landscapes/beach-boat.jpg',
 	imageAlt: 'Sample of 30 icons with friendly and fun details in outline, filled, and brand color styles.',
 };
 const reviews = {
@@ -204,6 +206,15 @@ const faqs = [
 	},
 	// More FAQs...
 ];
+
+onMounted(() => {
+	const imgContainer = document.querySelector('img');
+	console.log(imgContainer);
+
+	imageLoaded(imgContainer, () => {
+		loading.value = false;
+	});
+});
 </script>
 
 <style scoped>
