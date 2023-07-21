@@ -1,6 +1,5 @@
 import { useLogInfoStore } from '@/stores/modules/loginfoStore';
 import Home from '@/views/home.vue';
-import transitionAni from '@/views/transition.vue';
 import scrollmode from '@utils/scrollmode';
 import swal from 'sweetalert2';
 import { createRouter, createWebHistory } from 'vue-router';
@@ -70,13 +69,6 @@ const router = createRouter({
 			component: () => import('@/views/shopbagview.vue'),
 		},
 
-		// 加载中页面
-		{
-			path: '/transition',
-			name: 'transition',
-			component: transitionAni,
-			meta: { transitions: false },
-		},
 		// 错误页面
 		{
 			path: '/error',

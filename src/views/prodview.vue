@@ -218,5 +218,5 @@ onMounted(() => {
 </script>
 
 <style scoped>
-@import '@/assets/css/logByothers.css';
+@import '../assets/css/logByothers.css';
 </style>

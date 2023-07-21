@@ -1,62 +1,64 @@
-import vue from '@vitejs/plugin-vue'
-import { resolve } from 'path'
-import AutoImport from 'unplugin-auto-import/vite'
-import { ElementPlusResolver } from 'unplugin-vue-components/resolvers'
-import Components from 'unplugin-vue-components/vite'
-import { defineConfig, normalizePath } from 'vite'
-import TurboConsole from "vite-plugin-turbo-console";
+import { resolve } from 'path';
+import { ConfigEnv, defineConfig, loadEnv, UserConfig } from 'vite';
+import { wrapperEnv } from './build/getEnv';
+import { createVitePlugins } from './build/plugins';
 
 // https://vitejs.dev/config/
-export default defineConfig({
-	plugins: [
-		vue(),
-		AutoImport({
-			resolvers: [ElementPlusResolver()],
-		}),
-		Components({
-			resolvers: [ElementPlusResolver()],
-		}),
-		TurboConsole()
-	],
-	resolve: {
-		alias: {
-			'@': normalizePath(resolve(__dirname, 'src')),
-			'@components': normalizePath(resolve(__dirname, 'src/components')),
-			'@utils': normalizePath(resolve(__dirname, 'src/utils')),
-		},
-	},
+export default defineConfig(({ mode, command }: ConfigEnv): UserConfig => {
+	const root = process.cwd(); // 当前工作目录
+	const env = loadEnv(mode, root); // 环境变量, 从.env 文件中读取,例如: import.meta.env.VITE_PORT。mode是当前环境变量
+	const viteEnv = wrapperEnv(env); // 将环境变量转换成 Vite 配置文件中的变量
 
-	envPrefix: 'VITE_', // 环境变量前缀
-	server: {
-		open: true,
-		port:5173,
-		proxy: {
-			'/api': {
-				target: 'https://mock.mengxuegu.com/mock/645f5c037ba95d67784d6e10/tour', // easymock
-				changeOrigin: true,
-				rewrite: (path) => path.replace(/^\/api/, ''),
+	console.log('🦑🦑 mode: ', mode, '🦑🦑 viteEnv: ', viteEnv);
+	return {
+		base: viteEnv.VITE_PUBLIC_PATH, // 部署时的公共路径
+		resolve: {
+			alias: {
+				'@': resolve(__dirname, 'src'),
+				'@components': resolve(__dirname, 'src/components'),
+				'@utils': resolve(__dirname, 'src/utils'),
 			},
 		},
-	},
-	build: {
-		outDir: "dist",
-		minify: "esbuild",
-		// esbuild 打包更快，但是不能去除 console.log，terser打包慢，但能去除 console.log
-		// minify: "terser",
-		// terserOptions: {
-		// 	compress: {
-		// 		drop_console: viteEnv.VITE_DROP_CONSOLE,
-		// 		drop_debugger: true
-		// 	}
-		// },
-		chunkSizeWarningLimit: 1500,
-		rollupOptions: {
-			output: {
-				// Static resource classification and packaging
-				chunkFileNames: "assets/js/[name]-[hash].js",
-				entryFileNames: "assets/js/[name]-[hash].js",
-				assetFileNames: "assets/[ext]/[name]-[hash].[ext]"
-			}
-		}
-	}
-})
+		root,
+		css: {
+			transformer: 'postcss',
+		},
+		server: {
+			host: '0.0.0.0',
+			port: viteEnv.VITE_PORT,
+			open: viteEnv.VITE_OPEN,
+			cors: true,
+		},
+		plugins: createVitePlugins(viteEnv),
+
+		build: {
+			cssMinify: 'lightningcss',
+			outDir: 'dist',
+			minify: 'terser',
+			terserOptions: {
+				compress: {
+					drop_console: viteEnv.VITE_DROP_CONSOLE,
+					drop_debugger: true,
+				},
+				format: {
+					comments: false,
+				},
+			},
+			chunkSizeWarningLimit: 1500,
+			rollupOptions: {
+				output: {
+					chunkFileNames: 'assets/js/[name]-[hash].js',
+					entryFileNames: 'assets/js/[name]-[hash].js',
+					assetFileNames: 'assets/[ext]/[name]-[hash].[ext]',
+
+					manualChunks(id) {
+						//静态资源拆分打包
+						if (id.includes('node_modules')) {
+							return id.toString().split('node_modules/')[1].split('/')[0].toString();
+						}
+					},
+				},
+			},
+		},
+	};
+});

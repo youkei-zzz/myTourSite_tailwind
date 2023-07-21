@@ -294,7 +294,7 @@ if (logInfoStore.getLogOutStatus()) {
 			func: () => {
 				logInfoStore.setLogInStatus(false);
 				logInfoStore.setLogOutStatus(true);
-				window.location.reload();
+				window.location.href = '/';
 			},
 			icon: ArrowLeftOnRectangleIcon,
 		},

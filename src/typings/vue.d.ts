@@ -1,6 +1,15 @@
-import 'vue-router';
+/* 第三方库声明 */
+declare module 'imagesloaded';
 
-type Transition = {
+import 'vue-router';
+import { Ref } from 'vue';
+
+declare module 'vue' {
+	export interface ComponentCustomProperties {
+		$dynamicWidth: Ref<number>;
+	}
+}
+declare type Transition = {
 	/**
 	 * 进入过渡效果，在进入目的页面时应用该类，使用animate.css
 	 * 如果不需要动画，则应设置为false
@@ -12,7 +21,6 @@ type Transition = {
 	 */
 	leave?: string | false;
 };
-
 /**
  * 扩展Vue Router的RouteMeta接口，用于定义路由元数据
  */

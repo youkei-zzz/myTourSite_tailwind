@@ -1,6 +1,7 @@
-import type { TinyMCE } from "tinymce"
+import type { TinyMCE } from 'tinymce';
+
 declare global {
 	declare interface Window {
-		tinymce: TinyMCE
+		tinymce: TinyMCE;
 	}
 }

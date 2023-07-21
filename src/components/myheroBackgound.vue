@@ -61,34 +61,3 @@ onBeforeUnmount(() => {
 	lottie.destroy();
 });
 </script>
-
-<!-- 
-
-			animation.addEventListener('DOMLoaded', () => {
-			animation.goToAndPlay(0, true);
-			svgElement = animation?.renderer?.elements[0]?.comp?.svgElement as HTMLElement;
-			svgElement.style.setProperty('--animate-duration', '2s');
-			svgElement.classList.add('animate__fadeIn');
-			useIntervalF = useIntervalFn(() => {
-				left = svgElement.getBoundingClientRect().x;
-				if (left >= distance.value * 0.7 && document.visibilityState === 'visible') {
-					svgElement.classList.remove('animate__fadeIn');
-					svgElement.classList.add('animate__fadeOut');
-				} else if (left <= distance.value * 0.3 && document.visibilityState === 'visible') {
-					svgElement.classList.remove('animate__fadeOut');
-					svgElement.classList.add('animate__fadeIn');
-				}
-			}, 1500);
-			// document.getElementsByClassName('target')[0].addEventListener('animationiteration', () => {
-			// 	console.log('animationiteration');
-			// 	left = 0;
-			// 	pageVisibility();
-			// });
-			document.addEventListener('visibilitychange', pageVisibility);
-		});
-
-		animation.addEventListener('data_failed', () => {
-			emitter.emit('error', '动画加载失败，请刷新重试');
-		});
-
- -->

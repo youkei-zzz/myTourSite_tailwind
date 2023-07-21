@@ -90,5 +90,3 @@ const products = [
 	// More products...
 ];
 </script>
-
-<style scoped></style>

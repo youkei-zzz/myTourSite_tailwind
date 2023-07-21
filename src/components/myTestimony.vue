@@ -47,9 +47,10 @@
 	</swiper>
 </template>
 <script lang="ts" setup>
-import http from '@/api/index';
-import { Testimony } from '@/api/interface/httpInterface';
+import { Testimony } from '@/api/interface';
+import { getUserTestimony } from '@/api/modules/user';
 import { StarIcon } from '@heroicons/vue/20/solid';
+import emitter from '@utils/emitter';
 import { Autoplay, Navigation, Pagination } from 'swiper';
 import { Swiper, SwiperSlide } from 'swiper/vue';
 import { getCurrentInstance, ref } from 'vue';
@@ -58,8 +59,11 @@ const response_handled = ref<Testimony.homeTestimony>();
 const modules = [Autoplay, Pagination, Navigation];
 const dynamicWidth = getCurrentInstance()?.appContext.config.globalProperties.$dynamicWidth;
 
-http.get<Testimony.homeTestimony>('/api/testimony').then((res) => {
-	response_handled.value = res.data;
-	console.log(res.data);
-});
+try {
+	getUserTestimony().then((res) => {
+		response_handled.value = res.data;
+	});
+} catch (error: any) {
+	emitter.emit('error', error.message);
+}
 </script>

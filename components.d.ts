@@ -25,6 +25,7 @@ declare module 'vue' {
     MySideBar: typeof import('./src/components/mySideBar.vue')['default']
     MyTestimony: typeof import('./src/components/myTestimony.vue')['default']
     MyToggleTheme: typeof import('./src/components/myToggleTheme.vue')['default']
+    MyTransition: typeof import('./src/components/myTransition.vue')['default']
     MyUnkownError: typeof import('./src/components/myUnkownError.vue')['default']
     RouterLink: typeof import('vue-router')['RouterLink']
     RouterView: typeof import('vue-router')['RouterView']

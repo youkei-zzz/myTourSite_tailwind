@@ -56,7 +56,7 @@
 							quo illo mollitia ad officia facilis, recusandae, nisi quis labore dolor ducimus nam deleniti beatae ipsam dolore quos.
 						</p>
 					</div>
-					<div class="lg:hidden hero w-[100vw] bg-[url('https://i.imgtg.com/2023/07/04/OxUwMg.png')] bg-contain bg-no-repeat">
+					<div class="lg:hidden hero w-[100vw] bg-[url('https://i.imgtg.com/2023/07/19/OFgiCX.png')] bg-contain bg-no-repeat">
 						<div class="hero-content text-center">
 							<div class="max-w-xl text-slate-600 dark:text-slate-400">
 								<h1 class="mb-5 text-xl font-bold tracking-widest">为了更好的明天!</h1>
@@ -69,7 +69,7 @@
 						</div>
 					</div>
 				</section>
-				<div class="bg-[url('https://i.imgtg.com/2023/07/04/OxUwMg.png')] w-full bg-no-repeat bg-top bg-contain"></div>
+				<div class="bg-[url('https://i.imgtg.com/2023/07/19/OFgiCX.png')] w-full bg-no-repeat bg-top bg-contain"></div>
 			</div>
 
 			<div class="lg:flex max-w-screen-xl drop-shadow-2xl mx-auto font-semibold lg:my-36 my-28">
@@ -106,27 +106,28 @@
 </template>
 
 <script setup lang="ts">
-import http from '@/api/index';
+import { getUserTestimony } from '@/api/modules/user';
 import myAutoSearch from '@components/myAutoSearch.vue';
 import myFooter from '@components/myFooter.vue';
 import myHeader from '@components/myHeader.vue';
 import landingPage from '@components/myLandingPage.vue';
 import myPrice from '@components/myPrice.vue';
+import mySideBar from '@components/mySideBar.vue';
 import Testimony from '@components/myTestimony.vue';
 import heroBackground from '@components/myheroBackgound.vue';
-import emitter from '@utils/emitter';
-import { AxiosError } from 'axios';
 
-http
-	.get('/api/userlogin')
-	.then((res) => {
-		console.log(res);
-	})
-	.catch((err: AxiosError) => {
-		emitter.emit('error', err.message);
+try {
+	// const { data } = await getUserTestimony();
+	//  console.log(data);
+
+	getUserTestimony().then((res) => {
+		console.log(res.data);
 	});
+} catch (error: any) {
+	console.error(error.message);
+}
 </script>
 
 <style>
-@import '@/assets/css/algoliaCustom.css';
+@import '../assets/css/algoliaCustom.css';
 </style>

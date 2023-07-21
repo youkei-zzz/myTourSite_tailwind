@@ -24,5 +24,5 @@ document.documentElement.dataset.theme = sessionStorage.getItem('theme') ?? 'lig
 </script>
 
 <style scoped>
-@import '@/assets/css/errorButton.css';
+@import '../assets/css/errorButton.css';
 </style>

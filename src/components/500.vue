@@ -20,7 +20,6 @@ import { useRouter } from 'vue-router';
 document.documentElement.dataset.theme = sessionStorage.getItem('theme') ?? 'light'
 const router = useRouter();
 </script>
-
-<style scoped>
-@import '@/assets/css/errorButton.css';
+<style>
+@import '../assets/css/errorButton.css';
 </style>

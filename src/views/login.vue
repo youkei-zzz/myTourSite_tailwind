@@ -18,7 +18,7 @@
 									<label for="email" class="block text-sm font-medium leading-6 text-gray-900 dark:text-slate-400">用户名或邮箱</label>
 									<div class="mt-2">
 										<input
-											v-model="regInfo.name"
+											v-model="regInfo.username"
 											id="email"
 											type="text"
 											name="email"
@@ -96,8 +96,7 @@
 </template>
 
 <script setup lang="ts">
-import http from '@/api/index';
-import { Login } from '@/api/interface/httpInterface';
+import { loginApi } from '@/api/modules/login';
 import { useLogInfoStore } from '@/stores/modules/loginfoStore';
 import myToggleTheme from '@components/myToggleTheme.vue';
 import { useThrottleFn } from '@vueuse/core';
@@ -109,8 +108,7 @@ const route = useRoute();
 const router = useRouter();
 const LogInfoStore = useLogInfoStore();
 const regInfo = reactive({
-	name: '',
-	email: '',
+	username: '',
 	password: '',
 });
 
@@ -127,19 +125,25 @@ function register() {
 		})
 		.then((result) => {
 			if (result.isConfirmed) {
-				regInfo.name = '';
-				regInfo.email = '';
+				regInfo.username = '';
 				regInfo.password = '';
 			}
 		});
 }
+
+// const log = useThrottleFn(async () => {
+// 	const res = await loginApi();
+// 	console.log(res.data.userlist);
+
+// }, 300);
+
 const log = useThrottleFn(() => {
-	http.get<Login.ResLogin>('/api/userlogin').then(async (resp) => {
+	loginApi().then((resp) => {
 		if (resp.status === 200) {
 			console.log(resp.data.userlist);
 			// TODO: 应该在后端进行返回对应数据而不是在这里
 			resp.data.userlist.some((item) => {
-				if (item.username === regInfo.name && item.password === regInfo.password) {
+				if (item.username === regInfo.username && item.password === regInfo.password) {
 					console.log('登录成功');
 					return nextTick(() => {
 						LogInfoStore.setLogInStatus(true);
@@ -160,21 +164,22 @@ const log = useThrottleFn(() => {
 						timerProgressBar: true,
 					});
 				}
-				regInfo.name = '';
+				regInfo.username = '';
 				regInfo.password = '';
 			});
 		}
 	});
 }, 300);
+
 function goback() {
 	router.push({ name: 'Home' });
 }
+
 function forgetPassWord() {
 	let inputPattern = /[\w!#$%&'*+/=?^_`{|}~-]+(?:\.[\w!#$%&'*+/=?^_`{|}~-]+)*@(?:[\w](?:[\w-]*[\w])?\.)+[\w](?:[\w-]*[\w])?/;
 	swal
 		.mixin({
 			customClass: {
-				// input 类名
 				input: 'swal2_content__input',
 			},
 		})
@@ -231,5 +236,5 @@ function forgetPassWord() {
 </script>
 
 <style scoped lang="css">
-@import '@/assets/css/logByothers.css';
+@import '../assets/css/logByothers.css';
 </style>

@@ -155,7 +155,7 @@ const dropDownItems: DropDownProps[] = [
 </script>
 
 <style scoped>
-@import '@/assets/css/navbar.css';
-@import '@/assets/css/emailButton.css';
-@import '@/assets/css/loginButton.css';
+@import '../assets/css/navbar.css';
+@import '../assets/css/emailButton.css';
+@import '../assets/css/loginButton.css';
 </style>

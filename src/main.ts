@@ -1,5 +1,5 @@
-import '@/assets/css/global.css';
-import '@/assets/css/tailwind.css';
+import './assets/css/global.css';
+import './assets/css/tailwind.css';
 import router from '@/router';
 import pinia from '@/stores';
 import { library } from '@fortawesome/fontawesome-svg-core';
@@ -65,5 +65,19 @@ library.add(
 	faFaceFrown,
 	faSadCry,
 );
+// main.js
+
+// if ('serviceWorker' in navigator) {
+//   window.addEventListener('load', () => {
+//     navigator.serviceWorker.register('/service_worker.js') // 注册你的自定义 Service Worker 文件
+//       .then(registration => {
+//         console.log('Service Worker 注册成功：', registration);
+//       })
+//       .catch(error => {
+//         console.error('Service Worker 注册失败：', error);
+//       });
+//   });
+// }
+
 
 app.use(pinia).use(router).mount('#app');

@@ -89,5 +89,5 @@ onBeforeMount(() => {
 </script>
 
 <style>
-@import '@/assets/css/algoliaCustom.css';
+@import '../assets/css/algoliaCustom.css';
 </style>

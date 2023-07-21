@@ -85,7 +85,9 @@
 
 		<div class="divider relative h-[1px] m-0 bg-white"></div>
 		<p class="copyright relative text-center text-sm text-gray-300 bg-[#182f4a] p-5">
-			<strong>© 2023 All Rights Reserved. Designed by <em style="color: aliceblue">YangKe</em></strong>
+			<strong
+				>© 2023 All Rights Reserved. Designed by <em style="color: aliceblue">{{ author }}</em></strong
+			>
 		</p>
 	</div>
 </template>
@@ -99,6 +101,7 @@ import { useRouter } from 'vue-router';
 const router = useRouter();
 const mail = import.meta.env.VITE_PERSON_MAIL ?? '......';
 const address = import.meta.env.VITE_PERSON_ADDRESS ?? '......';
+const author = import.meta.env.VITE_PERSON_AUTHOR ?? '佚名';
 const LogInfoStore = useLogInfoStore();
 const contactInfo = reactive({
 	title: '',
@@ -135,5 +138,5 @@ const enterBlog = () => {
 </script>
 
 <style>
-@import '@/assets/css/wave.css';
+@import '../assets/css/wave.css';
 </style>

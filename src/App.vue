@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { Transition } from '@/typings/router';
+import { Transition } from '@/typings/vue';
 </script>
 
 <template>

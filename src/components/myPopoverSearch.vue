@@ -54,7 +54,7 @@
 </template>
 
 <script setup lang="ts">
-import { City } from '@/api/interface/httpInterface';
+import { City } from '@/api/interface';
 import { Combobox, ComboboxInput, ComboboxOption, ComboboxOptions, Dialog, DialogPanel, TransitionChild, TransitionRoot } from '@headlessui/vue';
 import { MagnifyingGlassIcon, QuestionMarkCircleIcon } from '@heroicons/vue/24/outline';
 import emitter from '@utils/emitter';
