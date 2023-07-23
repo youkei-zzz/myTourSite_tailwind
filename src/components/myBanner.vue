@@ -1,5 +1,5 @@
 <template>
-	<div id="err" ref="Err" v-if="errorArr.length !== 0" class="absolute space-y-3 top-full animate__animated animate__fadeInUp inset-x-0 bottom-0 z-30">
+	<div id="err" ref="Err" v-if="errorArr.length !== 0 && show_error_again === 'true'" class="absolute space-y-3 top-full animate__animated animate__fadeInUp inset-x-0 bottom-0 z-30">
 		<el-alert
 			v-for="(item, index) in errorArr"
 			:key="index"
@@ -62,6 +62,7 @@ let notifyBanner = ref<boolean | undefined>(undefined);
 let Err = ref<HTMLElement>();
 let Norm = ref<HTMLElement>();
 
+let show_error_again = useStorage<string>('show_error_again', sessionStorage.getItem('show_error_again') ?? 'true', sessionStorage);
 let show_notify_again = useStorage<string>('show_notify_again', sessionStorage.getItem('show_notify_again') ?? 'true', sessionStorage);
 let dynamicWidth = getCurrentInstance()?.appContext.config.globalProperties.$dynamicWidth!;
 let errorArr = ref<string[]>([]);
@@ -94,9 +95,8 @@ let handleErrorClose = (index: number) => {
 			if (index === 0) {
 				Err.value?.classList.add('pointer-events-none');
 				// errorBanner.value = undefined;
-				// show_error_again.value = 'false';
+				show_error_again.value = 'false';
 				errorArr.value = [];
-				console.log('nextTick');
 			}
 		},
 	});
