@@ -1,6 +1,6 @@
 <template>
 	<header class="myHeader z-[1000] fixed top-0 w-[100vw] hidden lg:fixed lg:z-50 lg:flex bg-white dark:bg-slate-800 items-center py-2 shadow-md navbar-nav justify-evenly">
-		<section class="hover:cursor-pointer ml-2">
+		<section id="tag" class="hover:cursor-pointer ml-2">
 			<a href="/">
 				<img src="https://i.imgtg.com/2023/05/14/OMBppN.png" alt="logo" class="dark:hidden xl:block hidden" />
 				<img src="https://i.imgtg.com/2023/05/14/OMBR5L.png" alt="logo-light" class="dark:xl:block hidden" />
@@ -115,13 +115,13 @@
 
 <script setup lang="ts">
 import DropDownProps from '@/components/interface/dropDown';
-import { useLogInfoStore } from '@/stores/modules/loginfoStore';
+import { useLogInfoStore } from '@/stores/modules/logInfoStore';
 import myBanner from '@components/myBanner.vue';
 import dropDown from '@components/myDropDown.vue';
 import myShoppingCart from '@components/myShoppingCart.vue';
 import myToggleTheme from '@components/myToggleTheme.vue';
 import { Disclosure } from '@headlessui/vue';
-import { Cog6ToothIcon, UserIcon,ArrowLeftOnRectangleIcon } from '@heroicons/vue/24/outline';
+import { ArrowLeftOnRectangleIcon, Cog6ToothIcon, UserIcon } from '@heroicons/vue/24/outline';
 import { getCurrentInstance, ref } from 'vue';
 
 const other = ref({ showTip: true });

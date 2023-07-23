@@ -15,7 +15,7 @@
 </template>
 
 <script lang="ts" setup>
-import { useLogInfoStore } from '@/stores/modules/loginfoStore';
+import { useLogInfoStore } from '@/stores/modules/logInfoStore';
 import Editor from '@tinymce/tinymce-vue';
 import emitter from '@utils/emitter';
 import { useStorage } from '@vueuse/core';

@@ -3,6 +3,9 @@
   "private": true,
   "version": "2.0.0",
   "type": "module",
+  "engines": {
+    "node": ">=16.0.0"
+  },
   "scripts": {
     "dev": "vite --host",
     "build:pro": "vue-tsc && vite build --mode production",
@@ -29,7 +32,6 @@
     "lottie-web": "^5.12.2",
     "mitt": "^3.0.1",
     "pinia": "^2.1.4",
-    "qs": "^6.11.2",
     "sweetalert2": "^11.7.16",
     "swiper": "^9.4.1",
     "tinymce": "^6.6.0",

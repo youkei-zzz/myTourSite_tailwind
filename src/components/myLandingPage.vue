@@ -60,7 +60,7 @@ const lists = [
 		name: 'chinaCity',
 	},
 	{
-		imgUrl: 'https://source.unsplash.cn/1240x874/?france,nature,sig=139',
+		imgUrl: 'https://source.unsplash.com/1240x874/?france,nature,sig=139',
 		name: 'france',
 	},
 ];

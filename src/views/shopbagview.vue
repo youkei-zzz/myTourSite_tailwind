@@ -3,7 +3,7 @@
 		<MyHeader></MyHeader>
 		<MySideBar></MySideBar>
 		<div class="mx-auto max-w-2xl px-4 py-16 sm:px-6 sm:py-24 lg:max-w-7xl lg:px-8">
-			<h2 class="text-2xl font-bold tracking-tight text-gray-900 dark:text-slate-400">Customers also purchased</h2>
+			<h2 class="text-2xl font-bold tracking-tight text-gray-900 dark:text-slate-400">请查阅:</h2>
 
 			<div class="mt-6 grid grid-cols-1 gap-x-6 gap-y-10 sm:grid-cols-2 lg:grid-cols-4 xl:gap-x-8">
 				<div v-for="product in products" :key="product.id" class="group relative">
@@ -18,7 +18,7 @@
 									{{ product.name }}
 								</a>
 							</h3>
-							<p class="mt-1 text-sm text-gray-500 dark:text-slate-300">{{ product.color }}</p>
+							<p class="mt-1 text-sm text-gray-500 dark:text-slate-300">{{ product.duration }}</p>
 						</div>
 						<p class="text-sm font-medium text-gray-900 dark:text-slate-300">{{ product.price }}</p>
 					</div>
@@ -39,8 +39,8 @@
 
 <script setup lang="ts">
 import MyFooter from '@/components/myFooter.vue';
-import MyHeader from '@components/myHeader.vue';
 import MySideBar from '@/components/mySideBar.vue';
+import MyHeader from '@components/myHeader.vue';
 import swal from 'sweetalert2';
 const pay = () => {
 	// 模拟结账延时
@@ -71,18 +71,31 @@ const pay = () => {
 const products = [
 	{
 		id: 1,
-		name: 'Machined Pen',
-		color: 'Black',
-		price: '$35',
+		name: '桂林山水',
+		duration: '5天',
+		price: '￥3999',
 		href: '#',
-		imageSrc: 'https://i.imgtg.com/2023/05/14/OMBXJF.jpg',
+		imageSrc: 'https://i.imgtg.com/2023/07/23/OhDUZ1.jpg',
 		imageAlt: 'Black machined steel pen with hexagonal grip and small white logo at top.',
-		availableColors: [
-			{ name: 'Black', colorBg: '#111827' },
-			{ name: 'Brass', colorBg: '#FDE68A' },
-			{ name: 'Chrome', colorBg: '#E5E7EB' },
-		],
 	},
-	// More products...
+
+	{
+		id: 2,
+		name: '江南水乡',
+		duration: '7天',
+		price: '￥5999',
+		href: '#',
+		imageSrc: 'https://i.imgtg.com/2023/07/23/OhDTBG.jpg',
+		imageAlt: '难以忘记的美景',
+	},
+	{
+		id: 3,
+		name: '广西之行',
+		duration: '3天',
+		price: '￥2999',
+		href: '#',
+		imageSrc: 'https://i.imgtg.com/2023/07/23/OhD5lM.jpg',
+		imageAlt: '超级美丽的风景',
+	}
 ];
 </script>

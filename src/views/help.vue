@@ -51,7 +51,7 @@
 											class="relative w-full cursor-default rounded-md bg-white dark:bg-slate-800/60 py-3 pl-3 pr-10 text-left text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 focus:outline-none focus:ring-2 focus:ring-indigo-500 sm:text-sm sm:leading-6">
 											<span class="flex items-center">
 												<font-awesome-icon :icon="['fas', 'caret-down']" class="h-6 w-6 dark:text-white" />
-												<span class="ml-3 block truncate font-semibold" :class="[selected.id < 4 ? '' : 'text-slate-400 tracking-widest']">{{ selected.content }}</span>
+												<span class="ml-3 block truncate font-semibold mi:text-[13px] text-sm" :class="[selected.id < 4 ? '' : 'text-slate-400 tracking-widest']">{{ selected.content }}</span>
 											</span>
 											<span class="pointer-events-none absolute inset-y-0 right-0 ml-3 flex items-center pr-2">
 												<ChevronUpDownIcon class="h-5 w-5 text-gray-400" aria-hidden="true" />
@@ -64,7 +64,8 @@
 												<ListboxOption as="template" v-for="resolve in question" :key="resolve.id" :value="resolve" v-slot="{ active, selected }">
 													<li :class="[active ? 'bg-slate-500 text-white' : 'text-gray-900', 'relative cursor-default select-none py-2 pl-3 pr-9']">
 														<a href="javascript:void(0)" class="flex items-center py-2">
-															<span v-if="resolve.id < 4" class="basis-5">
+															<!-- BUG: 写的比较死，所以如果要修改列表要修改此处 -->
+															<span v-if="resolve.id < 3" class="basis-5">
 																<font-awesome-icon v-if="resolve.id === 1" :icon="['fas', `${resolve?.svg}`]" bounce style="--fa-animation-duration: 1.55s" />
 																<font-awesome-icon v-else-if="resolve.id === 2" :icon="['fas', `${resolve?.svg}`]" bounce style="--fa-animation-duration: 1.7s" />
 																<font-awesome-icon v-else-if="resolve.id === 3" :icon="['fas', `${resolve?.svg}`]" bounce style="--fa-animation-duration: 1.8s" />
@@ -72,7 +73,7 @@
 															<span v-else class="basis-5">
 																<font-awesome-icon :icon="['fas', 'ellipsis']" :style="resolve.duration" />
 															</span>
-															<span class="ml-5 pl- block truncate font-semibold" v-if="resolve.id < 4">{{ resolve.content }}</span>
+															<span class="ml-5 pl- block truncate font-semibold text-sm" v-if="resolve.id < 4">{{ resolve.content }}</span>
 														</a>
 													</li>
 												</ListboxOption>
@@ -110,8 +111,8 @@
 					</section>
 					<section key="button" class="text-center max-w-md mx-auto py-5">
 						<router-link :to="{ name: 'Home' }" class="btn">
-							<font-awesome-icon :icon="['far', 'face-smile']" />
-							没有找到您想要的答案? 请联系我们
+							<font-awesome-icon :icon="['far', 'face-sad-tear']" />
+							没有找到想要的答案?
 						</router-link>
 					</section>
 				</transition-group>
@@ -143,25 +144,16 @@ const question = [
 	},
 	{
 		id: 2,
-		content: '联系我们-(企业)',
+		content: '联系我',
 		pathName: 'EsContactus',
 		avatar: 'https://images.unsplash.com/photo-1550525811-e5869dd03032?ixlib=rb-1.2.1&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80',
 		svg: '2',
 		animation: 'bounce',
 		duration: '1.5s;',
 	},
+
 	{
 		id: 3,
-		content: '联系我们-(个人)',
-		pathName: 'PsContactus',
-		avatar:
-			'<svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 576 512"><!--! Font Awesome Free 6.4.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --><path d="M512 80c8.8 0 16 7.2 16 16V416c0 8.8-7.2 16-16 16H64c-8.8 0-16-7.2-16-16V96c0-8.8 7.2-16 16-16H512zM64 32C28.7 32 0 60.7 0 96V416c0 35.3 28.7 64 64 64H512c35.3 0 64-28.7 64-64V96c0-35.3-28.7-64-64-64H64zM208 256a64 64 0 1 0 0-128 64 64 0 1 0 0 128zm-32 32c-44.2 0-80 35.8-80 80c0 8.8 7.2 16 16 16H304c8.8 0 16-7.2 16-16c0-44.2-35.8-80-80-80H176zM376 144c-13.3 0-24 10.7-24 24s10.7 24 24 24h80c13.3 0 24-10.7 24-24s-10.7-24-24-24H376zm0 96c-13.3 0-24 10.7-24 24s10.7 24 24 24h80c13.3 0 24-10.7 24-24s-10.7-24-24-24H376z"/></svg>',
-		svg: '3',
-		animation: 'bounce',
-		duration: '1.8s;',
-	},
-	{
-		id: 4,
 		content: '查看更多',
 		pathName: '',
 		avatar: '',
@@ -175,7 +167,7 @@ const description = [
 	{
 		id: 1,
 		content:
-			'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Malesuada proin libero nunc consequat interdum varius sit amet. Volutpat consequat mauris nunc congue.',
+			'在悠闲的夏日午后，我躺在草地上，仰望着蓝天白云。无聊的时光变得美好而放松。微风吹过，树叶沙沙作响。我闭上双眼，仿佛漂浮在梦幻的世界。偶尔有蝴蝶飞过，彩色的羽翼为这静谧增添了一抹活力',
 		target: '',
 		href: '#',
 		date: 'Sep 20',
@@ -186,7 +178,7 @@ const description = [
 	{
 		id: 2,
 		content:
-			'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Malesuada proin libero nunc consequat interdum varius sit amet. Volutpat consequat mauris nunc congue.',
+			'无聊的日子总是令人焦虑，仿佛时间变得慢得像蜗牛一样。我试着去寻找乐趣，却发现无处可寻。突然，一只小猫跑过来，撒娇似地蹭着我的腿，让我忍俊不禁。它的陪伴让无聊的时光变得温暖而有趣',
 		target: '',
 		href: '#',
 		date: 'Sep 22',
@@ -196,7 +188,8 @@ const description = [
 	},
 	{
 		id: 3,
-		content: 'lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
+		content:
+			'这是一个无聊的周末，朋友们都有各自的安排，而我只能一个人闲逛。漫步在公园里，看着孩子们快乐地奔跑，心情也逐渐明朗起来。我坐在长椅上，拿起画笔，在画纸上随意涂鸦，仿佛释放了内心的无聊，找到了一份宁静。',
 		target: '',
 		href: '#',
 		date: 'Sep 28',
@@ -206,7 +199,8 @@ const description = [
 	},
 	{
 		id: 4,
-		content: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
+		content:
+			'在这个慵懒的下午，我无所事事地坐在沙发上，手里拿着一本书，但根本无心读下去。突然，手机收到一条消息，是老友发来的搞笑视频。我笑得前仰后合，笑声化解了无聊的氛围，感慨网络的神奇魔力，让人忘却烦恼。',
 		target: '',
 		href: '#',
 		date: 'Sep 30',
@@ -216,7 +210,8 @@ const description = [
 	},
 	{
 		id: 5,
-		content: 'lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
+		content:
+			'无聊的时光总是让人觉得度日如年，我无奈地看着钟表，时间仿佛停滞不前。为了打发无聊，我拿起相机，随意拍摄窗外的风景。阳光照在花朵上，绽放出绚烂的色彩，让我感受到生活中美好的瞬间。',
 		target: '',
 		href: '#',
 		date: 'Oct 4',
@@ -226,7 +221,7 @@ const description = [
 	},
 ];
 
-const selected = ref(question[3]);
+const selected = ref(question[2]);
 
 watch(
 	() => selected.value,
@@ -234,9 +229,7 @@ watch(
 		if (selected.value.id === 1) {
 			router.push({ name: 'About' });
 		} else if (selected.value.id === 2) {
-			router.push({ name: 'EsContactus' });
-		} else if (selected.value.id === 3) {
-			router.push({ name: 'PsContactus' });
+			router.push({ name: 'Contactme' });
 		}
 	},
 );

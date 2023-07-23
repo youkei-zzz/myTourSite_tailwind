@@ -19,6 +19,7 @@
 									<div class="mt-2">
 										<input
 											v-model="regInfo.username"
+											placeholder="可以填: user"
 											id="email"
 											type="text"
 											name="email"
@@ -34,6 +35,7 @@
 											v-model="regInfo.password"
 											id="password"
 											name="password"
+											placeholder="可以填: 123"
 											type="password"
 											autocomplete="off"
 											class="block w-full pl-2 rounded-md border-0 py-1.5 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-primary dark:ring-offset-1 sm:text-sm sm:leading-6" />
@@ -97,7 +99,7 @@
 
 <script setup lang="ts">
 import { loginApi } from '@/api/modules/login';
-import { useLogInfoStore } from '@/stores/modules/loginfoStore';
+import { useLogInfoStore } from '@/stores/modules/logInfoStore';
 import myToggleTheme from '@components/myToggleTheme.vue';
 import { useThrottleFn } from '@vueuse/core';
 import swal from 'sweetalert2';
@@ -131,20 +133,14 @@ function register() {
 		});
 }
 
-// const log = useThrottleFn(async () => {
-// 	const res = await loginApi();
-// 	console.log(res.data.userlist);
-
-// }, 300);
-
 const log = useThrottleFn(() => {
 	loginApi().then((resp) => {
 		if (resp.status === 200) {
-			console.log(resp.data.userlist);
+			let flag = false;
 			// TODO: 应该在后端进行返回对应数据而不是在这里
-			resp.data.userlist.some((item) => {
-				if (item.username === regInfo.username && item.password === regInfo.password) {
-					console.log('登录成功');
+			resp.data.userlist.forEach((item, index) => {
+				if (flag === false && item.username === regInfo.username && item.password === regInfo.password) {
+					flag = true;
 					return nextTick(() => {
 						LogInfoStore.setLogInStatus(true);
 						LogInfoStore.setLogOutStatus(false);
@@ -154,7 +150,7 @@ const log = useThrottleFn(() => {
 							router.replace({ name: 'Home' });
 						}
 					});
-				} else {
+				} else if (index === resp.data.userlist.length - 1 && flag === false) {
 					swal.fire({
 						title: '登录失败',
 						text: '用户名或密码错误',
@@ -163,6 +159,8 @@ const log = useThrottleFn(() => {
 						showConfirmButton: false,
 						timerProgressBar: true,
 					});
+				} else {
+					return;
 				}
 				regInfo.username = '';
 				regInfo.password = '';

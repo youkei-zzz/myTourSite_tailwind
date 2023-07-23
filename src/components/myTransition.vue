@@ -10,6 +10,7 @@
 <script setup lang="ts">
 import { nextTick, onMounted } from 'vue';
 import { useRouter } from 'vue-router';
+import lottie from 'lottie-web/build/player/lottie_light';
 
 // const percentage = ref(0);
 const customColorMethod = (percentage: number) => {
@@ -26,7 +27,6 @@ const router = useRouter();
 onMounted(() => {
 	nextTick(() => {
 		document.documentElement.dataset.theme = (sessionStorage.getItem('theme') as string) ?? 'light';
-		// @ts-ignore
 		const animation = lottie.loadAnimation({
 			container: document.getElementById('domId') as HTMLElement,
 			renderer: 'svg',

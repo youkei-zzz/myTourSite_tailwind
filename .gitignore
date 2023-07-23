@@ -28,4 +28,3 @@ dist-ssr
 src/assets/scss
 # env文件
 *.env*
-stats.html

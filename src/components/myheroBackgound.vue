@@ -13,7 +13,7 @@
 </template>
 
 <script setup lang="ts">
-import lottie from 'lottie-web';
+import lottie from 'lottie-web/build/player/lottie_light';
 import { onBeforeUnmount, onMounted } from 'vue';
 
 onMounted(() => {

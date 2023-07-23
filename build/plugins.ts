@@ -1,8 +1,7 @@
 import { visualizer } from 'rollup-plugin-visualizer';
 import { PluginOption } from 'vite';
-import { VitePWA } from 'vite-plugin-pwa';
-
 import viteCompression from 'vite-plugin-compression';
+import { VitePWA } from 'vite-plugin-pwa';
 
 import vue from '@vitejs/plugin-vue';
 import AutoImport from 'unplugin-auto-import/vite';
@@ -24,7 +23,6 @@ export const createVitePlugins = (viteEnv: ViteEnv): (PluginOption | PluginOptio
 		Components({
 			resolvers: [ElementPlusResolver()],
 		}),
-
 		// 创建打包压缩配置
 		createCompression(viteEnv),
 		// vitePWA
@@ -73,11 +71,13 @@ const createVitePwa = (viteEnv: ViteEnv): PluginOption | PluginOption[] => {
 	return VitePWA({
 		registerType: 'autoUpdate',
 		minify: true,
-		
+		includeAssets: ['robots.txt', 'logo.png', 'logo32.png', 'logo24.png'],
+
 		manifest: {
 			theme_color: '#ffffff',
 			name: 'Tralive',
 			short_name: 'Tralive',
+
 			icons: [
 				{
 					src: '/logo.png',
@@ -100,52 +100,39 @@ const createVitePwa = (viteEnv: ViteEnv): PluginOption | PluginOption[] => {
 		workbox: {
 			cacheId: 'wisbayar-cache',
 			globPatterns: ['**/*.{js,css,png,jpg,jpeg,svg}'],
+
 			additionalManifestEntries: [
 				{ url: '/error?error_code=404', revision: null },
 				{ url: '/error?error_code=500', revision: null },
 				{ url: '/error?error_code=403', revision: null },
+				{ url: '/login', revision: null },
 			],
 			runtimeCaching: [
 				{
 					urlPattern: /\/login/,
-					handler: 'NetworkFirst',
+					handler: 'StaleWhileRevalidate',
 					options: {
-						networkTimeoutSeconds: 3,
 						cacheName: 'wisbayar-login',
 						cacheableResponse: {
 							statuses: [200],
 						},
 					},
 				},
-
 				{
-					// https://i.imgtg.com/
-					urlPattern: /https:\/\/i\.imgtg\.com/,
-					handler: 'CacheFirst',
-					options: {
-						cacheName: 'wisbayar-imgtg',
-						cacheableResponse: {
-							statuses: [200],
-						},
-					},
-				},
-
-				{
-					// 缓存unspash图片
-					urlPattern: /https:\/\/images\.unsplash\.com/,
+					urlPattern: /.*\.unsplash\.com.*/,
 					handler: 'CacheFirst',
 					options: {
 						cacheName: 'wisbayar-unsplash',
-						cacheableResponse: {
-							statuses: [200],
-						},
 						expiration: {
-							maxEntries: 35,
-							maxAgeSeconds: 6 * 60 * 60,
+							maxEntries: 15,
+							maxAgeSeconds: 12 * 60 * 60,
 						},
 						matchOptions: {
 							ignoreSearch: false,
 							ignoreVary: false,
+						},
+						cacheableResponse: {
+							statuses: [200],
 						},
 					},
 				},

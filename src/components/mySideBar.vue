@@ -152,7 +152,7 @@
 						</div>
 					</div>
 					<!-- TODO:等余额足够再使用 -->
-					<!-- <popOverSearch></popOverSearch> -->
+					<popOverSearch></popOverSearch>
 				</div>
 			</div>
 
@@ -198,10 +198,10 @@
 
 <script setup lang="ts">
 import DropDownProps from '@/components/interface/dropDown';
-import { useLogInfoStore } from '@/stores/modules/loginfoStore';
+import { useLogInfoStore } from '@/stores/modules/logInfoStore';
 import myBanner from '@components/myBanner.vue';
 import dropDown from '@components/myDropDown.vue';
-// import popOverSearch from '@components/myPopoverSearch.vue';
+import popOverSearch from '@components/myPopoverSearch.vue';
 import myToggleTheme from '@components/myToggleTheme.vue';
 import { Dialog, DialogPanel, TransitionChild, TransitionRoot } from '@headlessui/vue';
 import {
@@ -209,12 +209,10 @@ import {
 	ArrowRightOnRectangleIcon,
 	Bars3Icon,
 	BellAlertIcon,
-	ChatBubbleBottomCenterTextIcon,
 	Cog6ToothIcon,
 	CurrencyYenIcon,
 	EnvelopeIcon,
 	HomeIcon,
-	MapIcon,
 	QuestionMarkCircleIcon,
 	ShoppingCartIcon,
 	UserIcon,
@@ -240,15 +238,14 @@ const navigation: navi[] = [
 	{ name: '首页', href: '/', icon: HomeIcon, current: path === '/' },
 	{ name: '公告', href: '', icon: BellAlertIcon, current: path === '' },
 	{ name: '定价', href: '', icon: CurrencyYenIcon, current: path === '' },
+
+	{ name: '帮助', href: '/help', icon: QuestionMarkCircleIcon, current: path === '/help' },
 	{ name: '照片墙', href: '/travel', icon: UsersIcon, current: path === '/travel' },
-	{ name: '预定计划', href: '', icon: ChatBubbleBottomCenterTextIcon, current: path === '' },
-	{ name: '地图路线', href: '', icon: MapIcon, current: path === '/tourmap' },
 ];
 const teams: personal[] = [
-	{ index: 1, name: '博客', href: '/blog', icon: ChatBubbleBottomCenterTextIcon, current: path === '/blog' },
-	{ index: 2, name: '帮助', href: '/help', icon: QuestionMarkCircleIcon, current: path === '/help' },
+	{ index: 1, name: '博客', href: '/blog', current: path === '/blog' },
 	{
-		index: 3,
+		index: 2,
 		name: '注销',
 		func: () => {
 			logInfoStore.setLogInStatus(false);
@@ -257,10 +254,22 @@ const teams: personal[] = [
 		},
 		current: false,
 	},
+	{
+		index: 3,
+		name: '预定计划',
+		href: '#',
+		current: false,
+	},
+	{
+		index: 4,
+		name: '地图路线',
+		href: '#',
+		current: false,
+	},
 ];
 
 if (logInfoStore.getLogOutStatus()) {
-	navigation.push({ name: '登录', href: '/login', icon: ArrowRightOnRectangleIcon, current: false });
+	navigation.splice(navigation.length - 1, 0, { name: '登录', href: '/login', icon: ArrowRightOnRectangleIcon, current: false });
 }
 
 if (logInfoStore.getLogOutStatus()) {

@@ -31,26 +31,15 @@
 						<li v-for="product in products" :key="product.id" class="flex items-center py-6">
 							<img :src="product.imageSrc" :alt="product.imageAlt" class="h-16 w-16 flex-none rounded-md border border-gray-200" />
 							<div class="ml-4 flex-auto">
-								<h3 class="font-medium text-gray-900">
-									<!-- <a :href="product.href">
-										{{ product.name }}
-										<p class="text-gray-500">{{ product.color }}</p>
-									</a> -->
+								<h3 class="font-bold text-gray-900">
 									<router-link :to="{ name: 'Pdoverview', params: { id: product.id } }">
 										{{ product.name }}
-										<p class="text-gray-500">{{ product.color }}</p>
 									</router-link>
 								</h3>
 							</div>
 						</li>
 					</ul>
-
-					<button
-						@click.prevent="router.push('/shopbagview')"
-						type="submit"
-						class="w-full rounded-md border border-transparent bg-indigo-600 px-4 py-2 text-sm font-medium text-white shadow-sm hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2 focus:ring-offset-gray-50">
-						去购物车支付
-					</button>
+					<button @click.prevent="router.push('/shopbagview')" class="btn btn-wide">去支付</button>
 				</form>
 			</PopoverPanel>
 		</transition>
@@ -58,35 +47,27 @@
 </template>
 
 <script setup lang="ts">
-import { useLogInfoStore } from '@/stores/modules/loginfoStore';
+import { useLogInfoStore } from '@/stores/modules/logInfoStore';
 import { Popover, PopoverButton, PopoverPanel } from '@headlessui/vue';
 import { useRouter } from 'vue-router';
 
 const router = useRouter();
 const logInfoStore = useLogInfoStore();
-const navigation = [
-	{ name: 'Women', href: '#' },
-	{ name: 'Men', href: '#' },
-	{ name: 'Company', href: '#' },
-	{ name: 'Stores', href: '#' },
-];
+
 const products = [
 	{
 		id: 1,
-		name: 'Throwback Hip Bag',
+		name: '广西之行',
 		href: '/pdoverview/1',
-		color: 'Salmon',
-		imageSrc: 'https://tailwindui.com/img/ecommerce-images/shopping-cart-page-04-product-01.jpg',
-		imageAlt: 'Salmon orange fabric pouch with match zipper, gray zipper pull, and adjustable hip belt.',
+		imageSrc: 'https://i.imgtg.com/2023/07/23/OhD5lM.jpg',
+		imageAlt: '超级美丽的风景',
 	},
 	{
 		id: 2,
-		name: 'Medium Stuff Satchel',
+		name: '江南水乡',
 		href: '/pdoverview/2',
-		color: 'Blue',
-		imageSrc: 'https://tailwindui.com/img/ecommerce-images/shopping-cart-page-04-product-02.jpg',
-		imageAlt: 'Front of satchel with blue canvas body, black straps and handle, drawstring top, and front zipper pouch.',
+		imageSrc: 'https://i.imgtg.com/2023/07/23/OhDTBG.jpg',
+		imageAlt: '难以忘记的美景',
 	},
-	// More products...
 ];
 </script>

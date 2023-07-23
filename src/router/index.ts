@@ -1,5 +1,5 @@
-import { useLogInfoStore } from '@/stores/modules/loginfoStore';
-import Home from '@/views/home.vue';
+import { useLogInfoStore } from '@/stores/modules/logInfoStore';
+import home from '@/views/home.vue';
 import scrollmode from '@utils/scrollmode';
 import swal from 'sweetalert2';
 import { createRouter, createWebHistory } from 'vue-router';
@@ -10,7 +10,7 @@ const router = createRouter({
 		{
 			path: '/',
 			name: 'Home',
-			component: Home,
+			component: home,
 			meta: { transitions: {}, keepAlive: true },
 		},
 		{
@@ -26,7 +26,9 @@ const router = createRouter({
 		{
 			path: '/travel',
 			name: 'Travel',
-			component: () => import('@/views/travel.vue'),
+			redirect: () => {
+				return { path: '/error', query: { error_code: '500' } };
+			},
 		},
 
 		{
@@ -40,21 +42,15 @@ const router = createRouter({
 					component: () => import('@/views/help.vue'),
 				},
 				{
-					path: 'esContactus',
-					name: 'EsContactus',
-					component: () => import('@/views/contactus.vue'),
+					path: 'contactme',
+					name: 'Contactme',
+					component: () => import('@/views/contactme.vue'),
 				},
-				{
-					path: 'psContactus',
-					name: 'PsContactus',
-					redirect: () => {
-						return { name: 'EsContactus' };
-					},
-				},
+
 				{
 					path: 'about',
 					name: 'About',
-					component: () => import('@/views/aboutus.vue'),
+					component: () => import('@/views/aboutme.vue'),
 				},
 			],
 		},

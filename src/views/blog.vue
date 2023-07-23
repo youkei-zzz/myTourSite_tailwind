@@ -8,8 +8,7 @@
 					<div class="xl:basis-[calc(5%)] basis-[calc(10%)]"></div>
 					<div class="mx-auto max-w-7xl px-6 lg:px-8 flex-1">
 						<div class="mx-auto max-w-2xl lg:max-w-4xl">
-							<h2 class="text-3xl font-bold tracking-tight text-gray-900 dark:text-slate-400 sm:text-4xl">From the blog</h2>
-							<p class="mt-2 text-lg leading-8 text-gray-600 dark:text-slate-500">Learn how to grow your business with our expert advice.</p>
+							<h2 class="text-3xl font-bold tracking-tight text-gray-900 dark:text-slate-400 sm:text-4xl">我的奇妙之旅！</h2>
 							<div class="mt-16 space-y-20 lg:mt-20 lg:space-y-20">
 								<article v-for="post in posts" :key="post.id" class="relative isolate flex flex-col gap-8 lg:flex-row">
 									<div class="relative aspect-[16/9] sm:aspect-[2/1] lg:aspect-square lg:w-64 lg:shrink-0">
@@ -69,19 +68,19 @@ import mySideBar from '@components/mySideBar.vue';
 const posts = [
 	{
 		id: 1,
-		title: 'Boost your conversion rate',
+		title: '探索自然之美',
 		href: '#',
 		description:
-			'Illo sint voluptas. Error voluptates culpa eligendi. Hic vel totam vitae illo. Non aliquid explicabo necessitatibus unde. Sed exercitationem placeat consectetur nulla deserunt vel iusto corrupti dicta laboris incididunt.',
-		imageUrl: 'https://images.unsplash.com/photo-1496128858413-b36217c2ce36?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=3603&q=80',
-		date: 'Mar 16, 2020',
-		datetime: '2020-03-16',
-		category: { title: 'Marketing', href: '#' },
+			'当我踏上这次旅程时，我并没有预料到这会是一次如此刺激和令人难忘的经历。我的旅行开始于一个晴朗的早晨，我和我的朋友们在机场等待着我们的飞行。我们兴奋地谈论着我们即将探索的城市和景点，期待着新的冒险。',
+		imageUrl: 'https://source.unsplash.com/1240x874/?china,city,sig=124',
+		date: '2023年 7月 16日',
+		datetime: '2023-07-23',
+		category: { title: '3日游', href: '#' },
 		author: {
-			name: 'Michael Foster',
-			role: 'Co-Founder / CTO',
+			name: '李华',
+			role: '旅游爱好者',
 			href: '#',
-			imageUrl: 'https://images.unsplash.com/photo-1519244703995-f4e0f30006d5?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80',
+			imageUrl: 'https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80',
 		},
 	},
 	// More posts...

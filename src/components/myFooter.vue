@@ -93,7 +93,7 @@
 </template>
 
 <script setup lang="ts">
-import { useLogInfoStore } from '@/stores/modules/loginfoStore';
+import { useLogInfoStore } from '@/stores/modules/logInfoStore';
 import swal from 'sweetalert2';
 import { reactive } from 'vue';
 import { useRouter } from 'vue-router';

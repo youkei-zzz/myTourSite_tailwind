@@ -59,11 +59,11 @@ const response_handled = ref<Testimony.homeTestimony>();
 const modules = [Autoplay, Pagination, Navigation];
 const dynamicWidth = getCurrentInstance()?.appContext.config.globalProperties.$dynamicWidth;
 
-try {
-	getUserTestimony().then((res) => {
+getUserTestimony()
+	.then((res) => {
 		response_handled.value = res.data;
+	})
+	.catch((err) => {
+		emitter.emit('error', '获取用户评论失败');
 	});
-} catch (error: any) {
-	emitter.emit('error', error.message);
-}
 </script>

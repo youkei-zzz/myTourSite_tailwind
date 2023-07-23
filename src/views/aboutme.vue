@@ -42,17 +42,16 @@
 					<div class="mx-auto max-w-7xl px-6 pb-32 pt-36 sm:pt-60 lg:px-8 lg:pt-32">
 						<div class="mx-auto max-w-2xl gap-x-14 lg:mx-0 lg:flex lg:max-w-none lg:items-center">
 							<div class="w-full max-w-xl lg:shrink-0 xl:max-w-2xl">
-								<h1 class="text-4xl font-bold tracking-tight text-gray-900 sm:text-6xl">We’re changing the way people connect.</h1>
+								<h1 class="text-4xl font-bold tracking-tight text-gray-900 sm:text-6xl">欢迎来到我的旅游网站！</h1>
 								<p class="relative mt-6 text-lg leading-8 text-gray-600 sm:max-w-md lg:max-w-none">
-									Cupidatat minim id magna ipsum sint dolor qui. Sunt sit in quis cupidatat mollit aute velit. Et labore commodo nulla aliqua proident mollit ullamco exercitation
-									tempor. Sint aliqua anim nulla sunt mollit id pariatur in voluptate cillum. Eu voluptate tempor esse minim amet fugiat veniam occaecat aliqua.
+									我的使命是通过提供独特而令人难忘的旅行体验，连接人与人之间的心灵纽带。无论您是寻找冒险之旅、自然探索、文化交流，还是追求休闲度假，我都致力于满足您的旅行梦想。
 								</p>
 							</div>
 							<div class="mt-14 flex justify-end gap-8 sm:-mt-44 sm:justify-start sm:pl-20 lg:mt-0 lg:pl-0">
 								<div class="ml-auto w-44 flex-none space-y-8 pt-32 sm:ml-0 sm:pt-80 lg:order-last lg:pt-36 xl:order-none xl:pt-80">
 									<div class="relative">
 										<img
-											src="https://images.unsplash.com/photo-1557804506-669a67965ba0?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&h=528&q=80"
+											src="https://images.unsplash.com/photo-1600788880647-9c7fff6e721e?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&h=528&q=80"
 											alt=""
 											class="aspect-[2/3] w-full rounded-xl bg-gray-900/5 object-cover shadow-lg" />
 										<div class="pointer-events-none absolute inset-0 rounded-xl ring-1 ring-inset ring-gray-900/10" />
@@ -61,14 +60,14 @@
 								<div class="mr-auto w-44 flex-none space-y-8 sm:mr-0 sm:pt-52 lg:pt-36">
 									<div class="relative">
 										<img
-											src="https://images.unsplash.com/photo-1485217988980-11786ced9454?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&h=528&q=80"
+											src="https://images.unsplash.com/photo-1508060793788-7d5f1c40c4ba?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NDF8fHN0dWR5JTIwY2hpbmVzZXxlbnwwfHwwfHx8MA%3D%3D&auto=format&fit=crop&h=528&q=80"
 											alt=""
 											class="aspect-[2/3] w-full rounded-xl bg-gray-900/5 object-cover shadow-lg" />
 										<div class="pointer-events-none absolute inset-0 rounded-xl ring-1 ring-inset ring-gray-900/10" />
 									</div>
 									<div class="relative">
 										<img
-											src="https://images.unsplash.com/photo-1559136555-9303baea8ebd?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&crop=focalpoint&fp-x=.4&w=396&h=528&q=80"
+											src="https://images.unsplash.com/photo-1515523110800-9415d13b84a8?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8YmFza2V0YmFsbHxlbnwwfHwwfHx8MA%3D%3D&auto=format&fit=crop&crop=focalpoint&fp-x=.4&w=396&h=528&q=80"
 											alt=""
 											class="aspect-[2/3] w-full rounded-xl bg-gray-900/5 object-cover shadow-lg" />
 										<div class="pointer-events-none absolute inset-0 rounded-xl ring-1 ring-inset ring-gray-900/10" />
@@ -77,14 +76,14 @@
 								<div class="w-44 flex-none space-y-8 pt-32 sm:pt-0">
 									<div class="relative">
 										<img
-											src="https://images.unsplash.com/photo-1670272504528-790c24957dda?ixlib=rb-4.0.3&ixid=MnwxMjA3fDF8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&crop=left&w=400&h=528&q=80"
+											src="https://images.unsplash.com/photo-1528543606781-2f6e6857f318?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTZ8fHRyYXZlbHxlbnwwfHwwfHx8MA%3D%3D&auto=format&fit=crop&crop=left&w=400&h=528&q=80"
 											alt=""
 											class="aspect-[2/3] w-full rounded-xl bg-gray-900/5 object-cover shadow-lg" />
 										<div class="pointer-events-none absolute inset-0 rounded-xl ring-1 ring-inset ring-gray-900/10" />
 									</div>
 									<div class="relative">
 										<img
-											src="https://images.unsplash.com/photo-1670272505284-8faba1c31f7d?ixlib=rb-4.0.3&ixid=MnwxMjA3fDF8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&h=528&q=80"
+											src="https://images.unsplash.com/photo-1529912626516-e58b23f44f1d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MzZ8fHJhaW5ib3d8ZW58MHx8MHx8fDA%3D&auto=format&fit=crop&h=528&q=80"
 											alt=""
 											class="aspect-[2/3] w-full rounded-xl bg-gray-900/5 object-cover shadow-lg" />
 										<div class="pointer-events-none absolute inset-0 rounded-xl ring-1 ring-inset ring-gray-900/10" />
@@ -96,33 +95,24 @@
 				</div>
 			</div>
 
+ 
 			<!-- Content section -->
 			<div class="mx-auto -mt-12 max-w-7xl px-6 sm:mt-0 lg:px-8 xl:-mt-8">
 				<div class="mx-auto max-w-2xl lg:mx-0 lg:max-w-none">
-					<h2 class="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">Our mission</h2>
+					<h2 class="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">我的价值观：</h2>
 					<div class="mt-6 flex flex-col gap-x-8 gap-y-20 lg:flex-row">
 						<div class="lg:w-full lg:max-w-2xl lg:flex-auto">
-							<p class="text-xl leading-8 text-gray-600">
-								Aliquet nec orci mattis amet quisque ullamcorper neque, nibh sem. At arcu, sit dui mi, nibh dui, diam eget aliquam. Quisque id at vitae feugiat egestas ac. Diam
-								nulla orci at in viverra scelerisque eget. Eleifend egestas fringilla sapien.
-							</p>
+							<p class="text-base leading-8 text-gray-600">卓越服务：我的网站以卓越为标准，竭尽全力为您提供高品质的服务，确保您的旅行愉悦而舒适。</p>
 							<div class="mt-10 max-w-xl text-base leading-7 text-gray-700">
-								<p>
-									Faucibus commodo massa rhoncus, volutpat. Dignissim sed eget risus enim. Mattis mauris semper sed amet vitae sed turpis id. Id dolor praesent donec est. Odio
-									penatibus risus viverra tellus varius sit neque erat velit. Faucibus commodo massa rhoncus, volutpat. Dignissim sed eget risus enim. Mattis mauris semper sed amet
-									vitae sed turpis id.
-								</p>
-								<p class="mt-10">
-									Et vitae blandit facilisi magna lacus commodo. Vitae sapien duis odio id et. Id blandit molestie auctor fermentum dignissim. Lacus diam tincidunt ac cursus in
-									vel. Mauris varius vulputate et ultrices hac adipiscing egestas. Iaculis convallis ac tempor et ut. Ac lorem vel integer orci.
-								</p>
+								<p>旅行分享：我相信旅行是一种分享的过程，我将与您分享目的地的独特之处，让您更深入了解每个旅行地点的魅力。</p>
+								<p class="mt-10">个性定制：我深知每个旅行者的需求独特不同，因此我提供个性化定制服务，让您的旅程与众不同。</p>
 							</div>
 						</div>
 						<div class="lg:flex lg:flex-auto lg:justify-center">
 							<dl class="w-64 space-y-8 xl:w-80">
 								<div v-for="stat in stats" :key="stat.label" class="flex flex-col-reverse gap-y-4">
 									<dt class="text-base leading-7 text-gray-600">{{ stat.label }}</dt>
-									<dd class="text-5xl font-semibold tracking-tight text-gray-900">{{ stat.value }}</dd>
+									<dd class="text-2xl font-semibold tracking-tight text-gray-900">{{ stat.value }}</dd>
 								</div>
 							</dl>
 						</div>
@@ -138,13 +128,12 @@
 					class="aspect-[5/2] w-full object-cover xl:rounded-3xl" />
 			</div>
 
+			 
 			<!-- Values section -->
 			<div class="mx-auto mt-32 max-w-7xl px-6 sm:mt-40 lg:px-8">
 				<div class="mx-auto max-w-2xl lg:mx-0">
-					<h2 class="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">Our values</h2>
-					<p class="mt-6 text-lg leading-8 text-gray-600">
-						Lorem ipsum dolor sit amet consect adipisicing elit. Possimus magnam voluptatum cupiditate veritatis in accusamus quisquam.
-					</p>
+					<h2 class="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">我的目的</h2>
+					<p class="mt-6 text-lg leading-8 text-gray-600">感谢您选择我作为您的旅行伙伴。我将竭诚为您打造一段难忘的旅程，让您的旅行充满欢乐与满足！</p>
 				</div>
 				<dl class="mx-auto mt-16 grid max-w-2xl grid-cols-1 gap-x-8 gap-y-16 text-base leading-7 sm:grid-cols-2 lg:mx-0 lg:max-w-none lg:grid-cols-3">
 					<div v-for="value in values" :key="value.name">
@@ -170,7 +159,7 @@
 					</svg>
 				</div>
 				<div class="mx-auto max-w-7xl px-6 lg:px-8">
-					<h2 class="text-center text-lg font-semibold leading-8 text-gray-900">Trusted by the world’s most innovative teams</h2>
+					<h2 class="text-center text-lg font-semibold leading-8 text-gray-900">备受其它团队的信赖（Bushi🤣）</h2>
 					<div class="mx-auto mt-10 grid max-w-lg grid-cols-4 items-center gap-x-8 gap-y-10 sm:max-w-xl sm:grid-cols-6 sm:gap-x-10 lg:mx-0 lg:max-w-none lg:grid-cols-5">
 						<img
 							class="col-span-2 max-h-12 w-full object-contain lg:col-span-1"
@@ -209,9 +198,9 @@
 			<!-- Team section -->
 			<div class="mx-auto mt-32 max-w-7xl px-6 sm:mt-48 lg:px-8">
 				<div class="mx-auto max-w-2xl lg:mx-0">
-					<h2 class="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">Our team</h2>
+					<h2 class="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">绝佳旅行定制 - 独特旅程只为您一个人打造</h2>
 					<p class="mt-6 text-lg leading-8 text-gray-600">
-						Sit facilis neque ab nulla vel. Cum eos in laudantium. Temporibus eos totam in dolorum. Nemo vel facere repellendus ut eos dolores similique.
+						在我个人的旅游网站上，我是您唯一的焦点和服务对象。作为旅游规划的负责人，我将全心全意地为您打造独特而难忘的旅行体验。
 					</p>
 				</div>
 				<ul
@@ -228,8 +217,8 @@
 			<!-- Blog section -->
 			<div class="mx-auto mt-32 max-w-7xl px-6 sm:mt-40 lg:px-8">
 				<div class="mx-auto max-w-2xl lg:mx-0 lg:max-w-none">
-					<h2 class="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">From the blog</h2>
-					<p class="mt-2 text-lg leading-8 text-gray-600">Vel dolorem qui facilis soluta sint aspernatur totam cumque.</p>
+					<h2 class="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">博客文章摘要</h2>
+					<p class="mt-2 text-lg leading-8 text-gray-600">我的网站初衷与想法、态度</p>
 				</div>
 				<div class="mx-auto mt-16 grid max-w-2xl auto-rows-fr grid-cols-1 gap-8 sm:mt-20 lg:mx-0 lg:max-w-none lg:grid-cols-3">
 					<article
@@ -278,62 +267,62 @@ const navigation = [
 	{ name: 'Company', href: '#' },
 ];
 const stats = [
-	{ label: 'Transactions every 24 hours', value: '44 million' },
-	{ label: 'Assets under holding', value: '$119 trillion' },
-	{ label: 'New users annually', value: '46,000' },
+	{ label: '每天进步一点点', value: '掌握新的知识点，完成项目' },
+	{ label: '自我管理', value: '坚持锻炼，跑步、骑自行车或进行健身训练的时间增加' },
+	{ label: '时间管理', value: '更高效地规划时间，完成更多任务而不拖延' },
 ];
 const values = [
 	{
-		name: 'Be world-class',
+		name: '感受一流的体验',
 		description:
-			'Aut illo quae. Ut et harum ea animi natus. Culpa maiores et sed sint et magnam exercitationem quia. Ullam voluptas nihil vitae dicta molestiae et. Aliquid velit porro vero.',
+			'致力于提供卓越的旅游服务。从旅程规划到行程安排，我精心打造每一段旅行，让您感受世界级的服务与体验。我深知细节的重要性，因此我努力确保您的旅途完美无缺，让您在旅行中享受无与伦比的服务',
 	},
 	{
-		name: 'Share everything you know',
+		name: '分享旅行智慧',
 		description:
-			'Mollitia delectus a omnis. Quae velit aliquid. Qui nulla maxime adipisci illo id molestiae. Cumque cum ut minus rerum architecto magnam consequatur. Quia quaerat minima.',
+			'我乐于与您分享旅行目的地的独特魅力和趣闻轶事。无论是探索自然风光，领略文化遗产，还是寻找隐藏的宝藏，我将为您提供丰富的旅行资讯和实用建议，让您的旅程更加充实丰富。',
 	},
 	{
-		name: 'Always learning',
-		description: 'Aut repellendus et officiis dolor possimus. Deserunt velit quasi sunt fuga error labore quia ipsum. Commodi autem voluptatem nam. Quos voluptatem totam.',
+		name: '持续学习进取',
+		description: '我将始终不断学习和改进，以跟上行业的最新发展和趋势。努力为您提供最新、最优质的旅行选择。',
 	},
 	{
-		name: 'Be supportive',
+		name: '始终贴心支持',
 		description:
-			'Magnam provident veritatis odit. Vitae eligendi repellat non. Eum fugit impedit veritatis ducimus. Non qui aspernatur laudantium modi. Praesentium rerum error deserunt harum.',
+			'我将始终全程贴心支持您的旅行。无论是在旅途中遇到问题还是需要帮助，我都将及时解决并提供专业建议，确保您的旅程顺利愉快。',
 	},
 	{
-		name: 'Take responsibility',
+		name: '承担责任',
 		description:
-			'Sit minus expedita quam in ullam molestiae dignissimos in harum. Tenetur dolorem iure. Non nesciunt dolorem veniam necessitatibus laboriosam voluptas perspiciatis error.',
+			'您的安全与满意是我的首要责任。我经过精心策划和风险评估，确保所有行程安全可靠。在我的陪伴下，您可以放心探索世界的美丽与神奇。',
 	},
 	{
-		name: 'Enjoy downtime',
+		name: '享受美好时光',
 		description:
-			'Ipsa in earum deserunt aut. Quos minus aut animi et soluta. Ipsum dicta ut quia eius. Possimus reprehenderit iste aspernatur ut est velit consequatur distinctio.',
+			'旅行不仅是冒险和探索，更是享受美好时光的机会。我希望让您在旅途中尽情放松与愉悦，创造难忘的回忆。让我一起度过难忘的旅行时光，留下美好的回忆。',
 	},
 ];
 const team = [
 	{
-		name: 'Michael Foster',
-		role: 'Co-Founder / CTO',
-		imageUrl: 'https://images.unsplash.com/photo-1519244703995-f4e0f30006d5?ixlib=rb-=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=8&w=1024&h=1024&q=80',
+		name: 'KK',
+		role: '网站设计者',
+		imageUrl: 'https://images.unsplash.com/photo-1519764622345-23439dd774f7?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MjB8fGhhbmRzb21lJTIwYm95JTIwY2hpbmVzZXxlbnwwfHwwfHx8MA%3D%3D&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80',
 	},
 	// More people...
 ];
 const blogPosts = [
 	{
 		id: 1,
-		title: 'Vel expedita assumenda placeat aut nisi optio voluptates quas',
+		title: '我创建这个网站的初衷是锻炼自己，并不断学习新的技术。让我们通过持续学习一同成长、不断进步！',
 		href: '#',
 		description:
-			'Illo sint voluptas. Error voluptates culpa eligendi. Hic vel totam vitae illo. Non aliquid explicabo necessitatibus unde. Sed exercitationem placeat consectetur nulla deserunt vel. Iusto corrupti dicta.',
+			'我的目标是不断提升自己，成为您信赖的旅行伙伴。我相信通过持续学习和不断进步，我能够为您带来更多美好和难忘的旅行体验。让我们一同成长，一同探索，为您的旅行增添更多精彩与回忆！期待与您共同进步！',
 		imageUrl: 'https://images.unsplash.com/photo-1496128858413-b36217c2ce36?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=3603&q=80',
-		date: 'Mar 16, 2020',
-		datetime: '2020-03-16',
+		date: '2022年7月16日',
+		datetime: '2022-07-16',
 		author: {
-			name: 'Michael Foster',
-			imageUrl: 'https://images.unsplash.com/photo-1519244703995-f4e0f30006d5?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80',
+			name: 'kk',
+			imageUrl: 'https://images.unsplash.com/photo-1519764622345-23439dd774f7?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MjB8fGhhbmRzb21lJTIwYm95JTIwY2hpbmVzZXxlbnwwfHwwfHx8MA%3D%3D&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80',
 		},
 	},
 	// More posts...

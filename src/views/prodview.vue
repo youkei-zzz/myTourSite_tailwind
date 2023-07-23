@@ -15,9 +15,9 @@
 						<div class="mt-4">
 							<h1 class="text-2xl font-bold tracking-tight text-gray-900 sm:text-3xl">{{ product.name }}</h1>
 
-							<h2 id="information-heading" class="sr-only">Product information</h2>
+							<h2 id="information-heading" class="sr-only">travel information</h2>
 							<p class="mt-2 text-sm text-gray-500">
-								Version {{ product.version.name }} (Updated <time :datetime="product.version.datetime">{{ product.version.date }}</time
+								图片 {{ product.version.name }} (更新于 <time :datetime="product.version.datetime">{{ product.version.date }}</time
 								>)
 							</p>
 						</div>
@@ -47,12 +47,12 @@
 							@click.prevent="router.push('/shopbagview')"
 							type="button"
 							class="flex w-full items-center justify-center rounded-md border border-transparent bg-indigo-50 px-8 py-3 text-base font-medium text-indigo-700 hover:bg-indigo-100 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2 focus:ring-offset-gray-50">
-							看看其他的
+							看看购物车
 						</button>
 					</div>
 
 					<div class="mt-10 border-t border-gray-200 pt-10">
-						<h3 class="text-sm font-medium text-gray-900">Highlights</h3>
+						<h3 class="text-sm font-medium text-gray-900">特色</h3>
 						<div class="prose prose-sm mt-4 text-gray-500">
 							<ul role="list">
 								<li v-for="highlight in product.highlights" :key="highlight">{{ highlight }}</li>
@@ -82,7 +82,7 @@
 											selected ? 'border-indigo-600 text-indigo-600' : 'border-transparent text-gray-700 hover:border-gray-300 hover:text-gray-800',
 											'whitespace-nowrap border-b-2 py-6 text-sm font-medium',
 										]">
-										Customer Reviews
+										旅游者的评论
 									</button>
 								</Tab>
 								<Tab as="template" v-slot="{ selected }">
@@ -91,7 +91,7 @@
 											selected ? 'border-indigo-600 text-indigo-600' : 'border-transparent text-gray-700 hover:border-gray-300 hover:text-gray-800',
 											'whitespace-nowrap border-b-2 py-6 text-sm font-medium',
 										]">
-										FAQ
+										常见问题解答
 									</button>
 								</Tab>
 							</TabList>
@@ -158,13 +158,13 @@ const router = useRouter();
 const route = useRoute();
 const id = route.params.id;
 const product = {
-	name: `马尔代夫旅游 ${id}`,
-	version: { name: '1.0', date: 'June 5, 2021', datetime: '2021-06-05' },
-	price: `￥22${id}`,
-	description: `厌倦了城市的喧嚣？想去一个宁静的地方放松身心？那就来海岛度假吧！海岛是远离城市喧嚣的理想之地。这里有美丽的海滩、清澈的海水、温暖的阳光和友好的人们。你可以在海滩上游泳、日光浴、玩沙滩排球，也可以在海里潜水、浮潜、钓鱼。如果您喜欢冒险，您可以去丛林中徒步旅行，或者去探索海岛上的原始部落。海岛是度假的理想之地。这里有各种各样的酒店和度假村，您可以根据自己的喜好和预算选择。您也可以选择在海岛上租一间小屋，体验当地的生活。海岛是放松身心、享受美景、了解不同文化的理想之地。如果您正在寻找一个完美的度假目的地，那就来海岛吧！`,
-	highlights: ['200+ SVG icons in 3 unique styles', 'Compatible with Figma, Sketch, and Adobe XD', 'Drawn on 24 x 24 pixel grid'],
-	imageSrc: 'https://res.cloudinary.com/dfq7ospj9/image/upload/v1684672357/samples/landscapes/beach-boat.jpg',
-	imageAlt: 'Sample of 30 icons with friendly and fun details in outline, filled, and brand color styles.',
+	name: `苏州旅行 ${id}`,
+	version: { name: '苏州', date: '2023年7月5日', datetime: '2023-07-05' },
+	price: `￥${Math.floor(Math.random() * 5000)}`,
+	description: `厌倦了城市的喧嚣？想去一个宁静的地方放松身心？那就来江南水乡吧！江南水乡是远离城市喧嚣的理想之地。这里有美丽的水乡风光、清澈的河水、温暖的阳光和友好的人们。你可以在河边散步、划船、欣赏风景，也可以在水乡中探寻古镇，感受江南悠久的历史文化。江南水乡是度假的理想之地。这里有各种各样的民宿和酒店，您可以根据自己的喜好和预算选择。您也可以选择在水乡中租一间小屋，体验当地的生活。江南水乡是放松身心、享受美景、了解不同文化的理想之地。如果您正在寻找一个完美的度假目的地，那就来江南水乡吧！`,
+	highlights: ['美丽的河流和小溪', '古老的桥梁和水道', '宁静的村庄和田野','丰富的历史和文化'],
+	imageSrc: 'https://i.imgtg.com/2023/07/23/OhDTBG.jpg',
+	imageAlt: '难以忘记的美景',
 };
 const reviews = {
 	average: 4,
@@ -173,44 +173,44 @@ const reviews = {
 			id: 1,
 			rating: 5,
 			content: `
-        <p>This icon pack is just what I need for my latest project. There's an icon for just about anything I could ever need. Love the playful look!</p>
+        <p>江南水乡，古色古香，韵味无穷。这个图标包简直就是一幅精美的水墨画集！每一个图标都独具特色，细腻入微，勾勒出江南水乡的独特魅力。让我在设计中轻松加入家乡的元素，为作品增色不少。这些图标仿佛将我带回了小时候在家乡小巷中漫步的场景，让我感受到了家乡的温暖和宁静。对于喜欢江南文化的我来说，这个真是太珍贵了！强烈推荐给所有热爱江南水乡的朋友们！</p>
       `,
-			date: 'July 16, 2021',
-			datetime: '2021-07-16',
-			author: 'Emily Selman',
-			avatarSrc: 'https://images.unsplash.com/photo-1502685104226-ee32379fefbe?ixlib=rb-=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=8&w=256&h=256&q=80',
+			date: '2023年7月16日',
+			datetime: '2023-07-16',
+			author: '狄仁杰',
+			avatarSrc: 'https://images.unsplash.com/photo-1532407886693-8f1cb93380be?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTF8fGNoaW5lc2UlMjBtYW58ZW58MHx8MHx8fDA%3D&auto=format&fit=facearea&facepad=8&w=256&h=256&q=80',
 		},
 		{
 			id: 2,
 			rating: 5,
 			content: `
-        <p>Blown away by how polished this icon pack is. Everything looks so consistent and each SVG is optimized out of the box so I can use it directly with confidence. It would take me several hours to create a single icon this good, so it's a steal at this price.</p>
+        <p>这个建筑的设计相当独特，呈现出了江南水乡的一部分韵味。我喜欢它的传统风格，带给人一种古老而又亲切的感觉。外形的线条流畅，色彩柔和，很适合表现江南水乡的历史文化。不过，希望未来能加入更多当地特色的元素，让图标更加地道。总体而言，来这里旅游是一个不错的选择，对于想要一览江南水乡风情的人来说，绝对是一个十分有意义的旅行。</p>
       `,
-			date: 'July 12, 2021',
-			datetime: '2021-07-12',
-			author: 'Hector Gibbons',
-			avatarSrc: 'https://images.unsplash.com/photo-1500648767791-00dcc994a43e?ixlib=rb-=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=8&w=256&h=256&q=80',
+			date: '2023年7月12日',
+			datetime: '2023-07-12',
+			author: '李元芳',
+			avatarSrc: 'https://images.unsplash.com/photo-1540569014015-19a7be504e3a?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=facearea&facepad=8&w=256&h=256&q=80',
 		},
 		// More reviews...
 	],
 };
+
+ 
 const faqs = [
 	{
-		question: 'What format are these icons?',
-		answer: 'The icons are in SVG (Scalable Vector Graphic) format. They can be imported into your design tool of choice and used directly in code.',
+		question: '江南地区有哪些著名的古镇和水乡景点？',
+		answer: '江南地区有许多著名的古镇和水乡景点。其中一些最知名的包括苏州的周庄、西塘、乌镇，杭州的西湖，无锡的南长街和西山景区，以及南京的秦淮河畔等。这些古镇和水乡以其古老的建筑、静谧的水道和独特的江南风情吸引着众多游客。',
 	},
 	{
-		question: 'Can I use the icons at different sizes?',
+		question: '江南地区的美食有哪些特色？有没有一些必尝的当地美味推荐？',
 		answer:
-			"Yes. The icons are drawn on a 24 x 24 pixel grid, but the icons can be scaled to different sizes as needed. We don't recommend going smaller than 20 x 20 or larger than 64 x 64 to retain legibility and visual balance.",
+			"著名的江南美食包括苏州的本帮菜，如沙虾、狮子头、鱼头豆腐汤等；杭州的西湖醋鱼、东坡肉、龙井虾仁等；宁波的海鲜美食，如海螺煲、海鲜粥等。此外，江南地区的小吃也非常有名，比如上海的小笼包、南京的糖火烧、无锡的阳山水蜜桃等。这些美食代表了江南的独特风味，让人流连忘返。",
 	},
 	// More FAQs...
 ];
 
 onMounted(() => {
 	const imgContainer = document.querySelector('img');
-	console.log(imgContainer);
-
 	imageLoaded(imgContainer, () => {
 		loading.value = false;
 	});

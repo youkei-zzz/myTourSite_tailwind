@@ -10,7 +10,6 @@ import {
 	faBullhorn,
 	faCamera,
 	faCaretDown,
-	faCircleExclamation,
 	faCirclePlus,
 	faCircleQuestion,
 	faCircleUp,
@@ -22,8 +21,9 @@ import {
 	faReplyAll,
 	faRightFromBracket,
 	faSun,
-	faTriangleExclamation,
+	faCircleExclamation,
 	faUser,
+	faCircleArrowUp,
 } from '@fortawesome/free-solid-svg-icons';
 import 'animate.css/animate.min.css';
 
@@ -40,6 +40,7 @@ app.config.globalProperties.$dynamicWidth = throttledRef(useWindowSize().width, 
 app.component('font-awesome-icon', FontAwesomeIcon);
 
 library.add(
+	faCircleArrowUp,
 	faRightFromBracket,
 	faEnvelope,
 	faHouse,
@@ -51,7 +52,6 @@ library.add(
 	faCircleExclamation,
 	faMoon,
 	faSun,
-	faTriangleExclamation,
 	faCircleQuestion,
 	faCaretDown,
 	faEllipsis,

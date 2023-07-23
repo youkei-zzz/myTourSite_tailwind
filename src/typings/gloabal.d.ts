@@ -32,6 +32,7 @@ interface ImportMetaEnv extends ViteEnv {
 	readonly VITE_PERSON_MAIL: string;
 	readonly VITE_PERSON_ADDRESS: string;
 	readonly VITE_PERSON_AUTHOR: string;
+	readonly VITE_UNSPLASH_KEY: string;
 }
 
 /* 第三方库声明 */

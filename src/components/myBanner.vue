@@ -1,145 +1,146 @@
 <template>
-	<div ref="Err" v-if="bannerType !== undefined && bannerType === 'error'" class="absolute top-full animate__animated animate__fadeInUp inset-x-0 bottom-0">
-		<div class="flex items-center gap-x-6 bg-red-600 px-6 py-2.5 sm:px-3.5 sm:before:flex-1">
-			<span class="text-sm leading-6 font-semibold font-primary text-white relative">
-				<div href="#">
-					<strong class="font-semibold font-primary">啊哦! 😯</strong
-					><svg viewBox="0 0 2 2" class="mx-2 inline h-0.5 w-0.5 fill-current" aria-hidden="true">
-						<circle cx="1" cy="1" r="1" />
-					</svg>
-					{{ message }}
-					<font-awesome-icon :icon="['fas', 'triangle-exclamation']" class="w-5 h-5 absolute ml-1" fade size="2xs" />
+	<div id="err" ref="Err" v-if="errorArr.length !== 0" class="absolute space-y-3 top-full animate__animated animate__fadeInUp inset-x-0 bottom-0 z-30">
+		<el-alert
+			v-for="(item, index) in errorArr"
+			:key="index"
+			type="error"
+			:center="dynamicWidth >= 640"
+			:close-text="index === 0 ? '不再提示' : ''"
+			@close.prevent="handleErrorClose(index)"
+			style="padding: 20px 20px"
+			class="animate__animated animate__fadeInDown animate__delay-slow">
+			<template #default>
+				<div class="text-sm font-semibold font-primary">
+					<strong class="font-semibold font-primary">啊哦! 😯</strong>
+					{{ item }}
+					<font-awesome-icon :icon="['fas', 'circle-exclamation']" class="w-4 h-4 absolute ml-1" shake />
 				</div>
-			</span>
-			<div class="flex flex-1 justify-end">
-				<button @click="handleClickXmark" type="button" class="p-2 focus-visible:outline-offset-[-4px]">
-					<span class="sr-only">Dismiss</span>
-					<XMarkIcon class="h-5 w-5 text-white" aria-hidden="true" />
-				</button>
-			</div>
-		</div>
+			</template>
+		</el-alert>
 	</div>
 
 	<div
-		v-else-if="bannerType !== undefined && bannerType === 'normal'"
+		id="norm"
 		ref="Norm"
-		class="absolute top-full w-full animate__animated animate__fadeInUp isolate flex items-center gap-x-6 overflow-hidden bg-gray-50 px-6 py-2.5 sm:px-3.5 sm:before:flex-1">
-		<div class="absolute left-[max(-7rem,calc(50%-52rem))] top-1/2 -z-10 -translate-y-1/2 transform-gpu blur-2xl" aria-hidden="true">
-			<div
-				class="aspect-[577/310] w-[36.0625rem] bg-gradient-to-r from-[#fc4e96] to-[#675dfa] opacity-30"
-				style="
-					clip-path: polygon(
-						74.8% 41.9%,
-						97.2% 73.2%,
-						100% 34.9%,
-						92.5% 0.4%,
-						87.5% 0%,
-						75% 28.6%,
-						58.5% 54.6%,
-						50.1% 56.8%,
-						46.9% 44%,
-						48.3% 17.4%,
-						24.7% 53.9%,
-						0% 27.9%,
-						11.9% 74.2%,
-						24.9% 54.1%,
-						68.6% 100%,
-						74.8% 41.9%
-					);
-				" />
-		</div>
-		<div class="absolute left-[max(45rem,calc(50%+8rem))] top-1/2 -z-10 -translate-y-1/2 transform-gpu blur-2xl" aria-hidden="true">
-			<div
-				class="aspect-[577/310] w-[36.0625rem] bg-gradient-to-r from-[#ff80b5] to-[#9089fc] opacity-30"
-				style="
-					clip-path: polygon(
-						74.8% 41.9%,
-						97.2% 73.2%,
-						100% 34.9%,
-						92.5% 0.4%,
-						87.5% 0%,
-						75% 28.6%,
-						58.5% 54.6%,
-						50.1% 56.8%,
-						46.9% 44%,
-						48.3% 17.4%,
-						24.7% 53.9%,
-						0% 27.9%,
-						11.9% 74.2%,
-						24.9% 54.1%,
-						68.6% 100%,
-						74.8% 41.9%
-					);
-				" />
-		</div>
-		<div class="flex flex-wrap items-center gap-x-4 gap-y-2">
-			<p class="text-sm leading-6 text-gray-900">
-				<strong class="font-semibold">有新的通知! </strong
-				><svg viewBox="0 0 2 2" class="mx-2 inline h-0.5 w-0.5 fill-current" aria-hidden="true">
-					<circle cx="1" cy="1" r="1" /></svg
-				>{{ message }}
-			</p>
-			<a
-				href="#"
-				class="flex-none rounded-full bg-gray-900 px-3.5 py-1 text-sm font-semibold text-white shadow-sm hover:bg-gray-700 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-gray-900"
-				>赶紧来看看 <span aria-hidden="true">&rarr;</span></a
-			>
-		</div>
-		<div class="flex flex-1 justify-end">
-			<button @click="handleClickXmark" type="button" class="p-3 focus-visible:outline-offset-[-4px]">
-				<span class="sr-only">Dismiss</span>
-				<XMarkIcon class="h-5 w-5 text-gray-900" aria-hidden="true" />
-			</button>
-		</div>
+		v-if="notifyBanner && show_notify_again === 'true'"
+		class="top-full w-full animate__animated animate__fadeInUp isolate items-center overflow-hidden space-y-3 absolute">
+		<el-alert
+			v-for="(item, index) in notifyArr"
+			:key="index"
+			show-iconv-for="(item, index) in errorArr"
+			type="success"
+			:center="dynamicWidth >= 640"
+			:close-text="index === 0 ? '不再提示' : ''"
+			@close.prevent="handleNotifyClose(index)"
+			class="animate__animated animate__fadeInDown animate__delay-slow bg-gradient-to-r from-[#e780ab] via-blue-400 to-[#67faff76] opacity-20"
+			style="padding: 16px 0px">
+			<template #default>
+				<div class="flex flex-wrap items-center gap-x-4 gap-y-2 font-bold">
+					<p class="text-sm leading-6 text-gray-900">🪄{{ item }}</p>
+					<a
+						href="javascript:void(0)"
+						class="flex-none rounded-full bg-gray-900 px-3.5 py-1 text-sm font-semibold text-white shadow-sm hover:bg-gray-700 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-gray-900">
+						赶紧来看看
+						<span aria-hidden="true">&rarr;</span>
+					</a>
+				</div>
+			</template>
+		</el-alert>
 	</div>
 </template>
 
 <script setup lang="ts">
-import { XMarkIcon } from '@heroicons/vue/20/solid';
 import emitter from '@utils/emitter';
-import { onMounted, ref } from 'vue';
+import { useStorage } from '@vueuse/core';
+import { gsap } from 'gsap';
+import { getCurrentInstance, ref } from 'vue';
+import { useRouter } from 'vue-router';
 
-let bannerType = ref<string | undefined>(undefined);
-let message = ref<string | undefined>(undefined);
-let Err = ref<HTMLElement | null>();
-let Norm = ref<HTMLElement | null>();
+let router = useRouter();
+let notifyBanner = ref<boolean | undefined>(undefined);
+
+let Err = ref<HTMLElement>();
+let Norm = ref<HTMLElement>();
+
+let show_notify_again = useStorage<string>('show_notify_again', sessionStorage.getItem('show_notify_again') ?? 'true', sessionStorage);
+let dynamicWidth = getCurrentInstance()?.appContext.config.globalProperties.$dynamicWidth!;
+let errorArr = ref<string[]>([]);
+let notifyArr = ref<string[]>([]);
 
 emitter.on('error', (msg) => {
-	bannerType.value = 'error';
-	message.value = msg;
-	Err.value?.classList.remove('pointer-events-none');
-	Err.value?.classList.remove('animate__fadeOutDown');
-	Err.value?.classList.add('animate__fadeInUp');
+	if (router.currentRoute.value.path === '/') {
+		errorArr.value.push(msg);
+	}
 });
 
 emitter.on('notify', (msg) => {
-	bannerType.value = 'normal';
-	message.value = msg;
-	Norm.value?.classList.remove('pointer-events-none');
-	Norm.value?.classList.remove('animate__fadeOutDown');
-	Norm.value?.classList.add('animate__fadeInUp');
+	if (router.currentRoute.value.path === '/') {
+		notifyBanner.value = true;
+		notifyArr.value.push(msg);
+	}
 });
 
-let handleClickXmark = () => {
-	if (Norm.value) {
-		Norm.value?.classList.remove('animate__fadeInUp');
-		Norm.value?.classList.add('animate__fadeOutDown');
+let handleErrorClose = (index: number) => {
+	if (index !== 0) {
+		Err.value?.children[index].classList.add('animate__fadeOutDown');
+		Err.value?.children[index].classList.remove('animate__fadeInUp');
 	} else {
-		Err.value?.classList.remove('animate__fadeInUp');
 		Err.value?.classList.add('animate__fadeOutDown');
+		Err.value?.classList.remove('animate__fadeInUp');
 	}
+	gsap.to('#err', {
+		duration: 1.5,
+		onComplete: () => {
+			if (index === 0) {
+				Err.value?.classList.add('pointer-events-none');
+				// errorBanner.value = undefined;
+				// show_error_again.value = 'false';
+				errorArr.value = [];
+				console.log('nextTick');
+			}
+		},
+	});
 };
 
-onMounted(() => {
-	Err.value?.addEventListener('animationend', () => {
-		if (Err.value?.classList.contains('animate__fadeOutDown')) {
-			Err.value?.classList.add('pointer-events-none');
-		}
+let handleNotifyClose = (index: number) => {
+	if (index !== 0) {
+		Norm.value?.children[index].classList.add('animate__fadeOutDown');
+		Norm.value?.children[index].classList.remove('animate__fadeInUp');
+	} else {
+		Norm.value?.classList.add('animate__fadeOutDown');
+		Norm.value?.classList.remove('animate__fadeInUp');
+	}
+	gsap.to('#norm', {
+		duration: 1.5,
+		onComplete: () => {
+			console.log('complete');
+			if (index === 0) {
+				Norm.value?.classList.add('pointer-events-none');
+				notifyBanner.value = undefined;
+				show_notify_again.value = 'false';
+			}
+		},
 	});
-	Norm.value?.addEventListener('animationend', () => {
-		if (Norm.value?.classList.contains('animate__fadeOutDown')) {
-			Norm.value?.classList.add('pointer-events-none');
-		}
-	});
-});
+};
 </script>
+
+<style scoped>
+:deep(.el-alert .el-alert__close-btn.is-customed) {
+	top: 38%;
+	font-weight: 600;
+	color: #000;
+}
+:deep(.el-alert .el-alert__close-btn.is-customed:hover) {
+	color: gray;
+	transition: color 0.25s ease-in-out;
+}
+
+:deep(.el-alert .el-alert__close-btn) {
+	top: 45%;
+	font-weight: 900;
+}
+:deep(.el-icon svg) {
+	width: 30px;
+	scale: 1.7;
+}
+</style>

@@ -53,7 +53,7 @@
 
 <script setup lang="ts">
 import DropDownProps from '@/components/interface/dropDown';
-import { useLogInfoStore } from '@/stores/modules/loginfoStore';
+import { useLogInfoStore } from '@/stores/modules/logInfoStore';
 import { Menu, MenuButton, MenuItem, MenuItems } from '@headlessui/vue';
 import { XCircleIcon } from '@heroicons/vue/24/outline';
 import { PropType } from 'vue';
