@@ -117,10 +117,10 @@
 import myAutoSearch from '@components/myAutoSearch.vue';
 import myFooter from '@components/myFooter.vue';
 import myHeader from '@components/myHeader.vue';
-import mySideBar from '@components/mySideBar.vue';
 import heroBackground from '@components/myHeroBackgound.vue';
 import landingPage from '@components/myLandingPage.vue';
 import myPrice from '@components/myPrice.vue';
+import mySideBar from '@components/mySideBar.vue';
 import Testimony from '@components/myTestimony.vue';
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
@@ -131,7 +131,7 @@ onMounted(() => {
 	const tl1 = gsap.timeline({
 		scrollTrigger: {
 			trigger: '#ad1',
-			start: 'top-=150 60%',
+			start: 'top-=130 60%',
 			end: 'center 40%',
 			scrub: 3,
 			toggleActions: 'play none none none',
