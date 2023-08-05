@@ -45,6 +45,7 @@ const createCompression = (viteEnv: ViteEnv): PluginOption | PluginOption[] => {
 	if (compressList.includes('gzip')) {
 		plugins.push(
 			viteCompression({
+				threshold: 10240,
 				ext: '.gz',
 				algorithm: 'gzip',
 				deleteOriginFile: VITE_BUILD_COMPRESS_DELETE_ORIGIN_FILE,
@@ -54,6 +55,7 @@ const createCompression = (viteEnv: ViteEnv): PluginOption | PluginOption[] => {
 	if (compressList.includes('brotli')) {
 		plugins.push(
 			viteCompression({
+				threshold: 10240,
 				ext: '.br',
 				algorithm: 'brotliCompress',
 				deleteOriginFile: VITE_BUILD_COMPRESS_DELETE_ORIGIN_FILE,
@@ -71,13 +73,15 @@ const createVitePwa = (viteEnv: ViteEnv): PluginOption | PluginOption[] => {
 	return VitePWA({
 		registerType: 'autoUpdate',
 		minify: true,
-		includeAssets: ['robots.txt', 'logo.png', 'logo32.png', 'logo24.png'],
+		includeAssets: ['robots.txt', 'logo.png', 'logo32.png', 'logo24.png', 'maskable_icon.png'],
 
 		manifest: {
-			theme_color: '#ffffff',
+			theme_color: '#e3b200',
 			name: 'Tralive',
 			short_name: 'Tralive',
-
+			start_url: viteEnv.VITE_PUBLIC_PATH,
+			categories: ['student', 'personal', 'travel'],
+			
 			icons: [
 				{
 					src: '/logo.png',
@@ -94,19 +98,25 @@ const createVitePwa = (viteEnv: ViteEnv): PluginOption | PluginOption[] => {
 					sizes: '24x24',
 					type: 'image/png',
 				},
+				{
+					src: '/maskable_icon.png',
+					sizes: '512x512',
+					purpose: 'any maskable',
+				},
 			],
 		},
 
 		workbox: {
 			cacheId: 'wisbayar-cache',
-			globPatterns: ['**/*.{js,css,png,jpg,jpeg,svg}'],
-
+			globPatterns: ['**/*.{js,css,png,jpg,svg,webp}'],
 			additionalManifestEntries: [
-				{ url: '/error?error_code=404', revision: null },
-				{ url: '/error?error_code=500', revision: null },
-				{ url: '/error?error_code=403', revision: null },
-				{ url: '/login', revision: null },
+				{ url: 'error?error_code=404', revision: null },
+				{ url: 'error?error_code=500', revision: null },
+				{ url: 'error?error_code=403', revision: null },
+				{ url: 'login', revision: null },
+
 			],
+			
 			runtimeCaching: [
 				{
 					urlPattern: /\/login/,
@@ -124,7 +134,7 @@ const createVitePwa = (viteEnv: ViteEnv): PluginOption | PluginOption[] => {
 					options: {
 						cacheName: 'wisbayar-unsplash',
 						expiration: {
-							maxEntries: 15,
+							maxEntries: 20,
 							maxAgeSeconds: 12 * 60 * 60,
 						},
 						matchOptions: {
@@ -167,7 +177,7 @@ const createVitePwa = (viteEnv: ViteEnv): PluginOption | PluginOption[] => {
 				},
 				{
 					urlPattern: /.*\.css.*/,
-					handler: 'StaleWhileRevalidate',
+					handler: 'CacheFirst',
 					options: {
 						cacheName: 'wisbayar-css',
 						expiration: {

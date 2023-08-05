@@ -3,14 +3,14 @@
 		<footer class="bg-[#182f4a] bg-[url('@/assets/svg/cloud.svg')] will-change-transform w-full bg-top bg-no-repeat bg-cover text-center pt-[15vh] px-10 text-gray-200">
 			<div class="footer_content box-border grid lg:grid-cols-3 grid-rows-1" style="">
 				<div class="sc1 prose">
-					<img src="https://i.imgtg.com/2023/05/14/OMBR5L.png" alt="TraLive icon" />
+					<img src="https://i.imgtg.com/2023/07/28/OiZint.webp" alt="TraLive icon" class="w-[165px] h-[57px]" />
 					<p class="text-left text-gray-200 md:line-clamp-3 md:mb-16">
 						当您探索我的网站的每一个角落，感受到它所带给您的方便和快乐时，我深知这正是我不断前行的源动力。您的使用与浏览就是对我的肯定，我会不断完善和改进，让它变得越来越好。
 					</p>
 					<div class="footer-social lg:flex gap-8 hidden">
 						<div class="tooltip tooltip-bottom" data-tip="微信">
 							<span class="sr-only">微信</span>
-							<a href="javascript:void(0)" @click.prevent="open('wechat')">
+							<a href="javascript:void(0)" @click="open('wechat')">
 								<svg class="icon w-7 h-7" aria-hidden="true">
 									<use xlink:href="#icon-weixin"></use>
 								</svg>
@@ -19,7 +19,7 @@
 
 						<div class="tooltip tooltip-bottom" data-tip="QQ">
 							<span class="sr-only">QQ</span>
-							<a href="javascript:void(0)" @click.prevent="open('QQ')">
+							<a href="javascript:void(0)" @click="open('QQ')">
 								<svg class="icon w-7 h-7" aria-hidden="true">
 									<use xlink:href="#icon-QQ"></use>
 								</svg>
@@ -67,7 +67,7 @@
 					</span>
 
 					<span>
-						<a @click.prevent="enterBlog()" style="cursor: pointer">博客</a>
+						<a @click="enterBlog()" style="cursor: pointer">博客</a>
 					</span>
 					<span class="mb-16">
 						<router-link :to="{ path: '/contact' }"> 联系我们 </router-link>

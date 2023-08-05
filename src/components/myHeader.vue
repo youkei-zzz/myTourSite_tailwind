@@ -2,10 +2,10 @@
 	<header class="myHeader z-[1000] fixed top-0 w-[100vw] hidden lg:fixed lg:z-50 lg:flex bg-white dark:bg-slate-800 items-center py-2 shadow-md navbar-nav justify-evenly">
 		<section id="tag" class="hover:cursor-pointer ml-2">
 			<a href="/">
-				<img src="https://i.imgtg.com/2023/05/14/OMBppN.png" alt="logo" class="dark:hidden xl:block hidden" />
-				<img src="https://i.imgtg.com/2023/05/14/OMBR5L.png" alt="logo-light" class="dark:xl:block hidden" />
-				<img src="@/assets/image/dark-logo.png" alt="" class="block xl:hidden dark:hidden" />
-				<img src="@/assets/image/light-logo.png" alt="" class="xl:dark:hidden dark:block hidden" />
+				<img src="https://i.imgtg.com/2023/07/28/OiZnDx.webp" alt="logo" class="dark:hidden xl:block hidden h-full w-full" />
+				<img src="https://i.imgtg.com/2023/07/28/OiZint.webp" alt="logo-light" class="dark:xl:block hidden h-full w-full" />
+				<img src="@/assets/image/dark-logo.webp" alt="" class="block xl:hidden dark:hidden h-full w-full" />
+				<img src="@/assets/image/light-logo.webp" alt="" class="xl:dark:hidden dark:block hidden h-full w-full" />
 			</a>
 		</section>
 		<section></section>
@@ -19,7 +19,7 @@
 
 			<span class="dropdown dropdown-hover">
 				<font-awesome-icon :icon="['fas', 'compass']" class="pr-1" />
-				<a tabindex="0" class="m-1 font-primary font-bold cursor-pointer">活动</a>
+				<a href="javascript:void(0)" tabindex="0" class="m-1 font-primary font-bold cursor-pointer">活动</a>
 				<ul tabindex="0" class="dropdown-content z-[1] menu p-2 shadow-2xl bg-slate-50 dark:bg-slate-600 rounded-box w-52">
 					<li>
 						<router-link :to="{ name: 'Travel' }" class="font-semibold text-center dark:hover:text-slate-50">旅途纪实</router-link>

@@ -146,7 +146,7 @@ const question = [
 		id: 2,
 		content: '联系我',
 		pathName: 'EsContactus',
-		avatar: 'https://images.unsplash.com/photo-1550525811-e5869dd03032?ixlib=rb-1.2.1&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80',
+		avatar: 'https://images.unsplash.com/photo-1550525811-e5869dd03032?ixlib=rb-1.2.1&auto=compress&fm=webp&fit=facearea&facepad=2&w=256&h=256&q=60',
 		svg: '2',
 		animation: 'bounce',
 		duration: '1.5s;',

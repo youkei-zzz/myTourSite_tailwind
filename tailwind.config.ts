@@ -1,7 +1,7 @@
 import type { Config } from 'tailwindcss';
 
 export default {
-	content: ['./src/**/*.{vue,js,ts,jsx,tsx}'],
+	content: ['./src/**/*.{vue,js}'],
 	darkMode: ['class', '[data-theme="dark"]'],
 	theme: {
 		extend: {
@@ -40,6 +40,7 @@ export default {
 			},
 		},
 	},
+	 
 	daisyui: {
 		themes: false,
 	},

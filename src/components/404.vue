@@ -1,7 +1,7 @@
 <template>
 	<div class="hero min-h-screen dark:bg-[#1d232a]">
 		<div class="hero-content flex-col lg:flex-row">
-			<img src="@/assets/image/404.png" class="mi:w-72 md:w-[35vmax]" />
+			<img src="@/assets/image/404.webp" class="mi:w-72 md:w-[35vmax]" />
 			<div class="flex flex-col items-center">
 				<h2 class="my-5 p-0 text-6xl mi:text-4xl text-center text-red-400">404</h2>
 				<h4 class="mb-5 p-0 text-slate-400 text-xl mi:text-sm font-bold dark:text-slate-300">抱歉，您访问的页面不存在!<font-awesome-icon :icon="['far', 'face-sad-tear']" class="ml-3" /></h4>

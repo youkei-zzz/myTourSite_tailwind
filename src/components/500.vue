@@ -1,7 +1,7 @@
 <template>
 	<div class="hero min-h-screen dark:bg-[#1d232a]">
 		<div class="hero-content flex-col lg:flex-row gap-10">
-			<img src="@/assets/image/500.png" class="mi:w-72 md:w-[35vmax]" />
+			<img src="@/assets/image/500.webp" class="mi:w-72 md:w-[35vmax]" />
 			<div class="flex flex-col items-center">
 				<h2 class="my-5 p-0 text-6xl mi:text-4xl text-center text-red-400">500</h2>
 				<h4 class="mb-5 p-0 text-slate-400 text-xl mi:text-sm font-bold dark:text-slate-300">抱歉，您的网络不见了!<font-awesome-icon :icon="['far', 'face-frown']" class="ml-3" /></h4>

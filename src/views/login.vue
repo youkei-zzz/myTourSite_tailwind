@@ -87,11 +87,11 @@
 				</div>
 
 				<div class="hidden mi:block mi:absolute right-0 -top-[calc(1%)] w-1/2 h-1/2 pointer-events-none">
-					<img src="https://i.imgtg.com/2023/07/13/Oze1kL.png" alt="travel" class="animate__animated animate__fadeIn" />
+					<img src="https://i.imgtg.com/2023/07/28/OiZ0HB.webp" alt="travel" class="animate__animated animate__fadeIn" />
 				</div>
 			</div>
 			<div class="relative xl:block hidden flex-1 2xl:flex-grow-[0.6] lg:block -mr-20 pointer-events-none">
-				<img class="absolute inset-0 h-full object-contain animate__animated animate__fadeIn" src="https://i.imgtg.com/2023/07/13/Oze1kL.png" alt="travel" />
+				<img class="absolute inset-0 h-full object-contain animate__animated animate__fadeIn" src="https://i.imgtg.com/2023/07/28/OiZ0HB.webp" alt="travel" />
 			</div>
 		</div>
 	</div>

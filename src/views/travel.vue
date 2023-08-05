@@ -40,68 +40,68 @@
 					<section class="demo-gallery">
 						<ul class="wrapper flex pl-4 listnon">
 							<li class="flex-shrink-0 w-[clamp(500px,60vw,800px)] pr-4">
-								<img class="w-full bg-white h-auto" height="874" src="https://source.unsplash.com/1240x874/?china,nature,sig=124" width="1240" />
+								<img class="w-full bg-white h-auto" height="874" src="https://source.unsplash.com/1240x874/?china,nature,sig=124&auto=compress&fm=webp" width="1240" />
 							</li>
 							<li class="flex-shrink-0 w-[clamp(500px,60vw,800px)] pr-4">
-								<img class="w-full bg-white h-auto" height="874" src="https://source.unsplash.com/1240x874/?japan,nature,sig=82" width="1240" />
+								<img class="w-full bg-white h-auto" height="874" src="https://source.unsplash.com/1240x874/?japan,nature,sig=82&auto=compress&fm=webp" width="1240" />
 							</li>
 							<li class="flex-shrink-0 w-[clamp(500px,60vw,800px)] pr-4">
-								<img class="w-full bg-white h-auto" height="874" src="https://source.unsplash.com/1240x874/?greece,island,sig=128" width="1240" />
-							</li>
-						</ul>
-					</section>
-					<section class="demo-gallery">
-						<ul class="wrapper flex">
-							<li class="flex-shrink-0 w-[clamp(500px,60vw,800px)] pr-4">
-								<img class="w-full bg-white h-auto" height="874" src="https://source.unsplash.com/1240x874/?thailand,beach,sig=168" width="1240" />
-							</li>
-							<li class="flex-shrink-0 w-[clamp(500px,60vw,800px)] pr-4">
-								<img class="w-full bg-white h-auto" height="874" src="https://source.unsplash.com/1240x874/?france,architecture,sig=139" width="1240" />
-							</li>
-							<li class="flex-shrink-0 w-[clamp(500px,60vw,800px)] pr-4">
-								<img class="w-full bg-white h-auto" height="874" src="https://source.unsplash.com/1240x874/?united kingdom,city,sig=39" width="1240" />
+								<img class="w-full bg-white h-auto" height="874" src="https://source.unsplash.com/1240x874/?greece,island,sig=128&auto=compress&fm=webp" width="1240" />
 							</li>
 						</ul>
 					</section>
 					<section class="demo-gallery">
 						<ul class="wrapper flex">
 							<li class="flex-shrink-0 w-[clamp(500px,60vw,800px)] pr-4">
-								<img class="w-full bg-white h-auto" height="874" src="https://source.unsplash.com/1240x874/?egypt,pyramid,sig=121" width="1240" />
+								<img class="w-full bg-white h-auto" height="874" src="https://source.unsplash.com/1240x874/?thailand,beach,sig=168&auto=compress&fm=webp" width="1240" />
 							</li>
 							<li class="flex-shrink-0 w-[clamp(500px,60vw,800px)] pr-4">
-								<img class="w-full bg-white h-auto" height="874" src="https://source.unsplash.com/1240x874/?nature,sig=70" width="1240" />
+								<img class="w-full bg-white h-auto" height="874" src="https://source.unsplash.com/1240x874/?france,architecture,sig=139&auto=compress&fm=webp" width="1240" />
 							</li>
 							<li class="flex-shrink-0 w-[clamp(500px,60vw,800px)] pr-4">
-								<img class="w-full bg-white h-auto" height="874" src="https://source.unsplash.com/1240x874/?mexico,street,sig=63" width="1240" />
-							</li>
-						</ul>
-					</section>
-					<section class="demo-gallery">
-						<ul class="wrapper flex">
-							<li class="flex-shrink-0 w-[clamp(500px,60vw,800px)] pr-4">
-								<img class="w-full bg-white h-auto" height="874" src="https://source.unsplash.com/1240x874/?spain,landscape,sig=160" width="1240" />
-							</li>
-							<li class="flex-shrink-0 w-[clamp(500px,60vw,800px)] pr-4">
-								<img class="w-full bg-white h-auto" height="874" src="https://source.unsplash.com/1240x874/?india,culture,sig=88" width="1240" />
-							</li>
-							<li class="flex-shrink-0 w-[clamp(500px,60vw,800px)] pr-4">
-								<img class="w-full bg-white h-auto" height="874" src="https://source.unsplash.com/1240x874/?peru,mountain,sig=178" width="1240" />
-							</li>
-							<li class="flex-shrink-0 w-[clamp(500px,60vw,800px)] pr-4">
-								<img class="w-full bg-white h-auto" height="874" src="https://source.unsplash.com/1240x874/?nature,sig=175" width="1240" />
+								<img class="w-full bg-white h-auto" height="874" src="https://source.unsplash.com/1240x874/?united kingdom,city,sig=39&auto=compress&fm=webp" width="1240" />
 							</li>
 						</ul>
 					</section>
 					<section class="demo-gallery">
 						<ul class="wrapper flex">
 							<li class="flex-shrink-0 w-[clamp(500px,60vw,800px)] pr-4">
-								<img class="w-full bg-white h-auto" height="874" src="https://source.unsplash.com/1240x874/?france,city,sig=121" width="1240" />
+								<img class="w-full bg-white h-auto" height="874" src="https://source.unsplash.com/1240x874/?egypt,pyramid,sig=121&auto=compress&fm=webp" width="1240" />
 							</li>
 							<li class="flex-shrink-0 w-[clamp(500px,60vw,800px)] pr-4">
-								<img class="w-full bg-white h-auto" height="874" src="https://source.unsplash.com/1240x874/?nature,sig=70" width="1240" />
+								<img class="w-full bg-white h-auto" height="874" src="https://source.unsplash.com/1240x874/?nature,sig=70&auto=compress&fm=webp" width="1240" />
 							</li>
 							<li class="flex-shrink-0 w-[clamp(500px,60vw,800px)] pr-4">
-								<img class="w-full bg-white h-auto" height="874" src="https://source.unsplash.com/1240x874/?mexico,street,sig=63" width="1240" />
+								<img class="w-full bg-white h-auto" height="874" src="https://source.unsplash.com/1240x874/?mexico,street,sig=63&auto=compress&fm=webp" width="1240" />
+							</li>
+						</ul>
+					</section>
+					<section class="demo-gallery">
+						<ul class="wrapper flex">
+							<li class="flex-shrink-0 w-[clamp(500px,60vw,800px)] pr-4">
+								<img class="w-full bg-white h-auto" height="874" src="https://source.unsplash.com/1240x874/?spain,landscape,sig=160&auto=compress&fm=webp" width="1240" />
+							</li>
+							<li class="flex-shrink-0 w-[clamp(500px,60vw,800px)] pr-4">
+								<img class="w-full bg-white h-auto" height="874" src="https://source.unsplash.com/1240x874/?india,culture,sig=88&auto=compress&fm=webp" width="1240" />
+							</li>
+							<li class="flex-shrink-0 w-[clamp(500px,60vw,800px)] pr-4">
+								<img class="w-full bg-white h-auto" height="874" src="https://source.unsplash.com/1240x874/?peru,mountain,sig=178&auto=compress&fm=webp" width="1240" />
+							</li>
+							<li class="flex-shrink-0 w-[clamp(500px,60vw,800px)] pr-4">
+								<img class="w-full bg-white h-auto" height="874" src="https://source.unsplash.com/1240x874/?nature,sig=175&auto=compress&fm=webp" width="1240" />
+							</li>
+						</ul>
+					</section>
+					<section class="demo-gallery">
+						<ul class="wrapper flex">
+							<li class="flex-shrink-0 w-[clamp(500px,60vw,800px)] pr-4">
+								<img class="w-full bg-white h-auto" height="874" src="https://source.unsplash.com/1240x874/?france,city,sig=121&auto=compress&fm=webp" width="1240" />
+							</li>
+							<li class="flex-shrink-0 w-[clamp(500px,60vw,800px)] pr-4">
+								<img class="w-full bg-white h-auto" height="874" src="https://source.unsplash.com/1240x874/?nature,sig=70&auto=compress&fm=webp" width="1240" />
+							</li>
+							<li class="flex-shrink-0 w-[clamp(500px,60vw,800px)] pr-4">
+								<img class="w-full bg-white h-auto" height="874" src="https://source.unsplash.com/1240x874/?mexico,street,sig=63&auto=compress&fm=webp" width="1240" />
 							</li>
 						</ul>
 					</section>
@@ -114,88 +114,88 @@
 					<div ref="content_1_Phone" class="mt-4">
 						<div class="carousel bg-transparent carousel-center p-4 space-x-4 rounded-box">
 							<div class="carousel-item">
-								<img src="https://source.unsplash.com/256x155/?china,city,sig=124" class="rounded-box" />
+								<img src="https://source.unsplash.com/256x155/?china,city,sig=124&auto=compress&fm=webp" class="rounded-box" />
 							</div>
 							<div class="carousel-item">
-								<img src="https://source.unsplash.com/256x155/?japan,city,sig=82" class="rounded-box" />
+								<img src="https://source.unsplash.com/256x155/?japan,city,sig=82&auto=compress&fm=webp" class="rounded-box" />
 							</div>
 							<div class="carousel-item">
-								<img src="https://source.unsplash.com/256x155/?greece,city,sig=128" class="rounded-box" />
+								<img src="https://source.unsplash.com/256x155/?greece,city,sig=128&auto=compress&fm=webp" class="rounded-box" />
 							</div>
 							<div class="carousel-item">
-								<img src="https://source.unsplash.com/256x155/?thailand,city,sig=168" class="rounded-box" />
+								<img src="https://source.unsplash.com/256x155/?thailand,city,sig=168&auto=compress&fm=webp" class="rounded-box" />
 							</div>
 							<div class="carousel-item">
-								<img src="https://source.unsplash.com/256x155/?france,city,sig=139" class="rounded-box" />
+								<img src="https://source.unsplash.com/256x155/?france,city,sig=139&auto=compress&fm=webp" class="rounded-box" />
 							</div>
 							<div class="carousel-item">
-								<img src="https://source.unsplash.com/256x155/?united kingdom,city,sig=39" class="rounded-box" />
+								<img src="https://source.unsplash.com/256x155/?united kingdom,city,sig=39&auto=compress&fm=webp" class="rounded-box" />
 							</div>
 						</div>
 					</div>
 					<div ref="content_2_phone" class="mt-4">
 						<div class="carousel bg-transparent carousel-end p-4 space-x-4 rounded-box">
 							<div class="carousel-item">
-								<img src="https://source.unsplash.com/256x155/?china,mountains,sig=124" class="rounded-box" />
+								<img src="https://source.unsplash.com/256x155/?china,mountains,sig=124&auto=compress&fm=webp" class="rounded-box" />
 							</div>
 							<div class="carousel-item">
-								<img src="https://source.unsplash.com/256x155/?japan,mountains,sig=82" class="rounded-box" />
+								<img src="https://source.unsplash.com/256x155/?japan,mountains,sig=82&auto=compress&fm=webp" class="rounded-box" />
 							</div>
 							<div class="carousel-item">
-								<img src="https://source.unsplash.com/256x155/?greece,mountains,sig=128" class="rounded-box" />
+								<img src="https://source.unsplash.com/256x155/?greece,mountains,sig=128&auto=compress&fm=webp" class="rounded-box" />
 							</div>
 							<div class="carousel-item">
-								<img src="https://source.unsplash.com/256x155/?thailand,mountains,sig=168" class="rounded-box" />
+								<img src="https://source.unsplash.com/256x155/?thailand,mountains,sig=168&auto=compress&fm=webp" class="rounded-box" />
 							</div>
 							<div class="carousel-item">
-								<img src="https://source.unsplash.com/256x155/?france,mountains,sig=139" class="rounded-box" />
+								<img src="https://source.unsplash.com/256x155/?france,mountains,sig=139&auto=compress&fm=webp" class="rounded-box" />
 							</div>
 							<div class="carousel-item">
-								<img src="https://source.unsplash.com/256x155/?united kingdom,mountains,sig=39" class="rounded-box" />
+								<img src="https://source.unsplash.com/256x155/?united kingdom,mountains,sig=39&auto=compress&fm=webp" class="rounded-box" />
 							</div>
 						</div>
 					</div>
 					<div ref="content_3_phone" class="mt-4">
 						<div class="carousel bg-transparent carousel-end p-4 space-x-4 rounded-box">
 							<div class="carousel-item">
-								<img src="https://source.unsplash.com/256x155/?china,sea,sig=124" class="rounded-box" />
+								<img src="https://source.unsplash.com/256x155/?china,sea,sig=124&auto=compress&fm=webp" class="rounded-box" />
 							</div>
 							<div class="carousel-item">
-								<img src="https://source.unsplash.com/256x155/?japan,sea,sig=82" class="rounded-box" />
+								<img src="https://source.unsplash.com/256x155/?japan,sea,sig=82&auto=compress&fm=webp" class="rounded-box" />
 							</div>
 							<div class="carousel-item">
-								<img src="https://source.unsplash.com/256x155/?greece,sea,sig=128" class="rounded-box" />
+								<img src="https://source.unsplash.com/256x155/?greece,sea,sig=128&auto=compress&fm=webp" class="rounded-box" />
 							</div>
 							<div class="carousel-item">
-								<img src="https://source.unsplash.com/256x155/?thailand,sea,sig=168" class="rounded-box" />
+								<img src="https://source.unsplash.com/256x155/?thailand,sea,sig=168&auto=compress&fm=webp" class="rounded-box" />
 							</div>
 							<div class="carousel-item">
-								<img src="https://source.unsplash.com/256x155/?france,sea,sig=139" class="rounded-box" />
+								<img src="https://source.unsplash.com/256x155/?france,sea,sig=139&auto=compress&fm=webp" class="rounded-box" />
 							</div>
 							<div class="carousel-item">
-								<img src="https://source.unsplash.com/256x155/?united kingdom,sea,sig=39" class="rounded-box" />
+								<img src="https://source.unsplash.com/256x155/?united kingdom,sea,sig=39&auto=compress&fm=webp" class="rounded-box" />
 							</div>
 						</div>
 					</div>
 					<div ref="content_4_phone" class="mt-4">
 						<div class="carousel bg-transparent carousel-item p-4 space-x-4 rounded-box">
 							<div class="carousel-item">
-								<img src="https://source.unsplash.com/256x155/?china,forest,sig=124" class="rounded-box" />
+								<img src="https://source.unsplash.com/256x155/?china,forest,sig=124&auto=compress&fm=webp" class="rounded-box" />
 							</div>
 							<div class="carousel-item">
-								<img src="https://source.unsplash.com/256x155/?japan,forest,sig=82" class="rounded-box" />
+								<img src="https://source.unsplash.com/256x155/?japan,forest,sig=82&auto=compress&fm=webp" class="rounded-box" />
 							</div>
 							<div class="carousel-item">
-								<img src="https://source.unsplash.com/256x155/?greece,forest,sig=128" class="rounded-box" />
+								<img src="https://source.unsplash.com/256x155/?greece,forest,sig=128&auto=compress&fm=webp" class="rounded-box" />
 							</div>
 							<div class="carousel-item">
-								<img src="https://source.unsplash.com/256x155/?thailand,forest,sig=168" class="rounded-box" />
+								<img src="https://source.unsplash.com/256x155/?thailand,forest,sig=168&auto=compress&fm=webp" class="rounded-box" />
 							</div>
 							<div class="carousel-item">
-								<img src="https://source.unsplash.com/256x155/?france,forest,sig=139" class="rounded-box" />
+								<img src="https://source.unsplash.com/256x155/?france,forest,sig=139&auto=compress&fm=webp" class="rounded-box" />
 							</div>
 							<div class="carousel-item">
-								<img src="https://source.unsplash.com/256x155/?united kingdom,forest,sig=39" class="rounded-box" />
+								<img src="https://source.unsplash.com/256x155/?united kingdom,forest,sig=39&auto=compress&fm=webp" class="rounded-box" />
 							</div>
 						</div>
 					</div>

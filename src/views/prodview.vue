@@ -163,7 +163,7 @@ const product = {
 	price: `￥${Math.floor(Math.random() * 5000)}`,
 	description: `厌倦了城市的喧嚣？想去一个宁静的地方放松身心？那就来江南水乡吧！江南水乡是远离城市喧嚣的理想之地。这里有美丽的水乡风光、清澈的河水、温暖的阳光和友好的人们。你可以在河边散步、划船、欣赏风景，也可以在水乡中探寻古镇，感受江南悠久的历史文化。江南水乡是度假的理想之地。这里有各种各样的民宿和酒店，您可以根据自己的喜好和预算选择。您也可以选择在水乡中租一间小屋，体验当地的生活。江南水乡是放松身心、享受美景、了解不同文化的理想之地。如果您正在寻找一个完美的度假目的地，那就来江南水乡吧！`,
 	highlights: ['美丽的河流和小溪', '古老的桥梁和水道', '宁静的村庄和田野','丰富的历史和文化'],
-	imageSrc: 'https://i.imgtg.com/2023/07/23/OhDTBG.jpg',
+	imageSrc: 'https://i.imgtg.com/2023/07/28/OiZNkp.webp',
 	imageAlt: '难以忘记的美景',
 };
 const reviews = {
@@ -178,7 +178,7 @@ const reviews = {
 			date: '2023年7月16日',
 			datetime: '2023-07-16',
 			author: '狄仁杰',
-			avatarSrc: 'https://images.unsplash.com/photo-1532407886693-8f1cb93380be?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTF8fGNoaW5lc2UlMjBtYW58ZW58MHx8MHx8fDA%3D&auto=format&fit=facearea&facepad=8&w=256&h=256&q=80',
+			avatarSrc: 'https://images.unsplash.com/photo-1532407886693-8f1cb93380be?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTF8fGNoaW5lc2UlMjBtYW58ZW58MHx8MHx8fDA%3D&auto=compress&fm=webp&fit=facearea&facepad=8&w=256&h=256&q=60',
 		},
 		{
 			id: 2,
@@ -189,7 +189,7 @@ const reviews = {
 			date: '2023年7月12日',
 			datetime: '2023-07-12',
 			author: '李元芳',
-			avatarSrc: 'https://images.unsplash.com/photo-1540569014015-19a7be504e3a?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=facearea&facepad=8&w=256&h=256&q=80',
+			avatarSrc: 'https://images.unsplash.com/photo-1540569014015-19a7be504e3a?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=compress&fm=webp&fit=facearea&facepad=8&w=256&h=256&q=60',
 		},
 		// More reviews...
 	],

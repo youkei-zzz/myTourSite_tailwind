@@ -48,19 +48,19 @@ import { onMounted } from 'vue';
 // CAUTION: name不能重复,因为会导致class重复而使得一个图片加载后另外一个还未加载的图片的加载效果也会消失
 const lists = [
 	{
-		imgUrl: 'https://source.unsplash.com/1240x874/?thailand,beach,sig=168',
+		imgUrl: 'https://source.unsplash.com/1240x874/?thailand,beach,sig=168&auto=compress&fm=webp',
 		name: 'thailandBeach',
 	},
 	{
-		imgUrl: 'https://source.unsplash.com/1240x874/?japan,nature,sig=82',
+		imgUrl: 'https://source.unsplash.com/1240x874/?japan,nature,sig=82&auto=compress&fm=webp',
 		name: 'JapanNature',
 	},
 	{
-		imgUrl: 'https://source.unsplash.com/1240x874/?china,city,sig=124',
+		imgUrl: 'https://source.unsplash.com/1240x874/?china,city,sig=124&auto=compress&fm=webp',
 		name: 'chinaCity',
 	},
 	{
-		imgUrl: 'https://source.unsplash.com/1240x874/?france,nature,sig=139',
+		imgUrl: 'https://source.unsplash.com/1240x874/?france,nature,sig=139&auto=compress&fm=webp',
 		name: 'france',
 	},
 ];
@@ -71,10 +71,9 @@ onMounted(() => {
 	imagesloaded(ImgContainer).on('progress', function (instance: any, image: any) {
 		const img = image.img as HTMLImageElement;
 		const images = instance.images as [];
-		console.log(instance);
 		images.forEach((LoadingImage: any) => {
 			LoadingImage.isLoaded && LoadingImage.img.parentElement?.parentElement.classList.remove('pointer-events-none');
-			LoadingImage.isLoaded === false && ((LoadingImage.img as HTMLImageElement).src = 'https://i.imgtg.com/2023/07/15/OzcE8S.png');
+			LoadingImage.isLoaded === false && ((LoadingImage.img as HTMLImageElement).src = 'https://i.imgtg.com/2023/07/28/OiKjiG.webp');
 		});
 		document.getElementsByClassName(img.alt)[0]?.classList.add('animate__fadeOut');
 	});

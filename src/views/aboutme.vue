@@ -51,7 +51,7 @@
 								<div class="ml-auto w-44 flex-none space-y-8 pt-32 sm:ml-0 sm:pt-80 lg:order-last lg:pt-36 xl:order-none xl:pt-80">
 									<div class="relative">
 										<img
-											src="https://images.unsplash.com/photo-1600788880647-9c7fff6e721e?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&h=528&q=80"
+											src="https://images.unsplash.com/photo-1600788880647-9c7fff6e721e?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=compress&fm=webp&fit=crop&h=528&q=60"
 											alt=""
 											class="aspect-[2/3] w-full rounded-xl bg-gray-900/5 object-cover shadow-lg" />
 										<div class="pointer-events-none absolute inset-0 rounded-xl ring-1 ring-inset ring-gray-900/10" />
@@ -60,14 +60,14 @@
 								<div class="mr-auto w-44 flex-none space-y-8 sm:mr-0 sm:pt-52 lg:pt-36">
 									<div class="relative">
 										<img
-											src="https://images.unsplash.com/photo-1508060793788-7d5f1c40c4ba?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NDF8fHN0dWR5JTIwY2hpbmVzZXxlbnwwfHwwfHx8MA%3D%3D&auto=format&fit=crop&h=528&q=80"
+											src="https://images.unsplash.com/photo-1508060793788-7d5f1c40c4ba?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NDF8fHN0dWR5JTIwY2hpbmVzZXxlbnwwfHwwfHx8MA%3D%3D&auto=compress&fm=webp&fit=crop&h=528&q=60"
 											alt=""
 											class="aspect-[2/3] w-full rounded-xl bg-gray-900/5 object-cover shadow-lg" />
 										<div class="pointer-events-none absolute inset-0 rounded-xl ring-1 ring-inset ring-gray-900/10" />
 									</div>
 									<div class="relative">
 										<img
-											src="https://images.unsplash.com/photo-1515523110800-9415d13b84a8?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8YmFza2V0YmFsbHxlbnwwfHwwfHx8MA%3D%3D&auto=format&fit=crop&crop=focalpoint&fp-x=.4&w=396&h=528&q=80"
+											src="https://images.unsplash.com/photo-1515523110800-9415d13b84a8?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8YmFza2V0YmFsbHxlbnwwfHwwfHx8MA%3D%3D&auto=compress&fm=webp&fit=crop&crop=focalpoint&fp-x=.4&w=396&h=528&q=60"
 											alt=""
 											class="aspect-[2/3] w-full rounded-xl bg-gray-900/5 object-cover shadow-lg" />
 										<div class="pointer-events-none absolute inset-0 rounded-xl ring-1 ring-inset ring-gray-900/10" />
@@ -76,14 +76,14 @@
 								<div class="w-44 flex-none space-y-8 pt-32 sm:pt-0">
 									<div class="relative">
 										<img
-											src="https://images.unsplash.com/photo-1528543606781-2f6e6857f318?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTZ8fHRyYXZlbHxlbnwwfHwwfHx8MA%3D%3D&auto=format&fit=crop&crop=left&w=400&h=528&q=80"
+											src="https://images.unsplash.com/photo-1528543606781-2f6e6857f318?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTZ8fHRyYXZlbHxlbnwwfHwwfHx8MA%3D%3D&auto=compress&fm=webp&fit=crop&crop=left&w=400&h=528&q=60"
 											alt=""
 											class="aspect-[2/3] w-full rounded-xl bg-gray-900/5 object-cover shadow-lg" />
 										<div class="pointer-events-none absolute inset-0 rounded-xl ring-1 ring-inset ring-gray-900/10" />
 									</div>
 									<div class="relative">
 										<img
-											src="https://images.unsplash.com/photo-1529912626516-e58b23f44f1d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MzZ8fHJhaW5ib3d8ZW58MHx8MHx8fDA%3D&auto=format&fit=crop&h=528&q=80"
+											src="https://images.unsplash.com/photo-1529912626516-e58b23f44f1d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MzZ8fHJhaW5ib3d8ZW58MHx8MHx8fDA%3D&auto=compress&fm=webp&fit=crop&h=528&q=60"
 											alt=""
 											class="aspect-[2/3] w-full rounded-xl bg-gray-900/5 object-cover shadow-lg" />
 										<div class="pointer-events-none absolute inset-0 rounded-xl ring-1 ring-inset ring-gray-900/10" />
@@ -123,7 +123,7 @@
 			<!-- Image section -->
 			<div class="mt-32 sm:mt-40 xl:mx-auto xl:max-w-7xl xl:px-8">
 				<img
-					src="https://images.unsplash.com/photo-1529156069898-49953e39b3ac?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2832&q=80"
+					src="https://images.unsplash.com/photo-1529156069898-49953e39b3ac?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=compress&fm=webp&fit=crop&w=2832&q=60"
 					alt=""
 					class="aspect-[5/2] w-full object-cover xl:rounded-3xl" />
 			</div>
@@ -306,7 +306,7 @@ const team = [
 	{
 		name: 'KK',
 		role: '网站设计者',
-		imageUrl: 'https://images.unsplash.com/photo-1519764622345-23439dd774f7?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MjB8fGhhbmRzb21lJTIwYm95JTIwY2hpbmVzZXxlbnwwfHwwfHx8MA%3D%3D&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80',
+		imageUrl: 'https://images.unsplash.com/photo-1519764622345-23439dd774f7?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MjB8fGhhbmRzb21lJTIwYm95JTIwY2hpbmVzZXxlbnwwfHwwfHx8MA%3D%3D&auto=compress&fm=webp&fit=facearea&facepad=2&w=256&h=256&q=60',
 	},
 	// More people...
 ];
@@ -317,12 +317,12 @@ const blogPosts = [
 		href: '#',
 		description:
 			'我的目标是不断提升自己，成为您信赖的旅行伙伴。我相信通过持续学习和不断进步，我能够为您带来更多美好和难忘的旅行体验。让我们一同成长，一同探索，为您的旅行增添更多精彩与回忆！期待与您共同进步！',
-		imageUrl: 'https://images.unsplash.com/photo-1496128858413-b36217c2ce36?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=3603&q=80',
+		imageUrl: 'https://images.unsplash.com/photo-1496128858413-b36217c2ce36?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&webp=format&fit=crop&w=3603&q=60',
 		date: '2022年7月16日',
 		datetime: '2022-07-16',
 		author: {
 			name: 'kk',
-			imageUrl: 'https://images.unsplash.com/photo-1519764622345-23439dd774f7?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MjB8fGhhbmRzb21lJTIwYm95JTIwY2hpbmVzZXxlbnwwfHwwfHx8MA%3D%3D&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80',
+			imageUrl: 'https://images.unsplash.com/photo-1519764622345-23439dd774f7?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MjB8fGhhbmRzb21lJTIwYm95JTIwY2hpbmVzZXxlbnwwfHwwfHx8MA%3D%3D&webp=format&fm=webp&fit=facearea&facepad=2&w=256&h=256&q=60',
 		},
 	},
 	// More posts...

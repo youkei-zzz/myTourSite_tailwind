@@ -102,7 +102,7 @@ index
 		// })
 	})
 	.catch((err) => {
-		emitter.emit('error', '经费不足，搜索引擎初始化失败');
+		emitter.emit('error', '搜索引擎暂时关闭');
 	});
 
 function onSelect(person: any) {

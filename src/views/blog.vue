@@ -72,7 +72,7 @@ const posts = [
 		href: '#',
 		description:
 			'当我踏上这次旅程时，我并没有预料到这会是一次如此刺激和令人难忘的经历。我的旅行开始于一个晴朗的早晨，我和我的朋友们在机场等待着我们的飞行。我们兴奋地谈论着我们即将探索的城市和景点，期待着新的冒险。',
-		imageUrl: 'https://source.unsplash.com/1240x874/?china,city,sig=124',
+		imageUrl: 'https://source.unsplash.com/1240x874/?china,city,sig=124&auto=compress&fm=webp',
 		date: '2023年 7月 16日',
 		datetime: '2023-07-23',
 		category: { title: '3日游', href: '#' },
@@ -80,7 +80,7 @@ const posts = [
 			name: '李华',
 			role: '旅游爱好者',
 			href: '#',
-			imageUrl: 'https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80',
+			imageUrl: 'https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=compress&fm=webp&fit=facearea&facepad=2&w=256&h=256&q=60',
 		},
 	},
 	// More posts...

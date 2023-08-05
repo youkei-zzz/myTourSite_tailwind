@@ -66,7 +66,7 @@ const products = [
 		id: 2,
 		name: '江南水乡',
 		href: '/pdoverview/2',
-		imageSrc: 'https://i.imgtg.com/2023/07/23/OhDTBG.jpg',
+		imageSrc: 'https://i.imgtg.com/2023/07/28/OiZNkp.webp',
 		imageAlt: '难以忘记的美景',
 	},
 ];

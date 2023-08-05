@@ -13,9 +13,12 @@
 			<landingPage></landingPage>
 			<myAutoSearch></myAutoSearch>
 
+			
+
+
 			<section>
 				<div id="ad1" class="lg:flex max-w-screen-xl drop-shadow-2xl mx-auto font-semibold lg:my-36 my-28">
-					<div class="bg-[url('https://i.imgtg.com/2023/07/13/OzehDN.png')] w-full bg-no-repeat bg-top bg-contain"></div>
+					<div class="bg-[url('https://i.imgtg.com/2023/07/28/OiZkqC.webp')] w-full bg-no-repeat bg-top bg-contain"></div>
 					<section class="basis-full max-w-3xl">
 						<div class="md:hidden">
 							<h1 class="md:text-center text-[2vmax]">准备一场 说走就走的旅途</h1>
@@ -23,7 +26,7 @@
 								让你的旅程变得更加丰富多彩！无论是穿越大陆还是漫游异国风情，让我们与您一同启程。从一望无际的海洋到壮阔的山脉，每一个景致都值得细细品味。我们为您提供最便捷、最安全的旅游服务，让您尽情享受旅途的每一个时刻。让我们携手，让旅行成为您生命中的闪耀之一。
 							</p>
 						</div>
-						<div class="lg:hidden hero w-[100vw] bg-[url('https://i.imgtg.com/2023/07/13/OzehDN.png')] bg-contain bg-no-repeat">
+						<div class="lg:hidden hero w-[100vw] bg-[url('https://i.imgtg.com/2023/07/28/OiZkqC.webp')] bg-contain bg-no-repeat">
 							<div class="bg-transparent bg-opacity-50"></div>
 							<div class="hero-content text-center">
 								<div class="max-w-xl text-slate-600 dark:text-slate-400">
@@ -58,7 +61,7 @@
 								corrupti quo illo mollitia ad officia facilis, recusandae, nisi quis labore dolor ducimus nam deleniti beatae ipsam dolore quos.
 							</p>
 						</div>
-						<div class="lg:hidden hero w-[100vw] bg-[url('https://i.imgtg.com/2023/07/19/OFgiCX.png')] bg-contain bg-no-repeat">
+						<div class="lg:hidden hero w-[100vw] bg-[url('https://i.imgtg.com/2023/07/28/OiZWYN.webp')] bg-contain bg-no-repeat">
 							<div class="hero-content text-center">
 								<div class="max-w-xl text-slate-600 dark:text-slate-400">
 									<h1 class="mb-5 text-xl font-bold tracking-widest">为了更好的明天!</h1>
@@ -71,11 +74,11 @@
 							</div>
 						</div>
 					</section>
-					<div class="bg-[url('https://i.imgtg.com/2023/07/19/OFgiCX.png')] w-full bg-no-repeat bg-top bg-contain"></div>
+					<div class="bg-[url('https://i.imgtg.com/2023/07/28/OiZWYN.webp')] w-full bg-no-repeat bg-top bg-contain"></div>
 				</div>
 
 				<div id="ad3" class="lg:flex max-w-screen-xl drop-shadow-2xl mx-auto font-semibold lg:my-36 my-28">
-					<div class="bg-[url('https://i.imgtg.com/2023/07/13/Ozei6C.png')] w-full bg-no-repeat bg-top bg-contain"></div>
+					<div class="bg-[url('https://i.imgtg.com/2023/07/28/OiZxAL.webp')] w-full bg-no-repeat bg-top bg-contain"></div>
 					<section class="basis-full max-w-3xl">
 						<div class="md:hidden">
 							<h1 class="md:text-center text-[2vmax]">匆忙吗,那就即刻开始吧!</h1>
@@ -85,7 +88,7 @@
 								corrupti quo illo mollitia ad officia facilis, recusandae, nisi quis labore dolor ducimus nam deleniti beatae ipsam dolore quos.
 							</p>
 						</div>
-						<div class="lg:hidden hero w-[100vw] bg-[url('https://i.imgtg.com/2023/07/13/Ozei6C.png')] bg-contain bg-no-repeat">
+						<div class="lg:hidden hero w-[100vw] bg-[url('https://i.imgtg.com/2023/07/28/OiZxAL.webp')] bg-contain bg-no-repeat">
 							<div class="hero-content text-center">
 								<div class="max-w-xl text-slate-600 dark:text-slate-400">
 									<h1 class="mb-5 text-xl font-bold tracking-widest">匆忙吗,那就即刻开始吧!</h1>

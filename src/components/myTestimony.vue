@@ -34,7 +34,7 @@
 					<figcaption class="mt-10 flex items-center gap-x-6">
 						<img
 							class="h-12 w-12 rounded-full"
-							src="https://images.unsplash.com/photo-1550525811-e5869dd03032?ixlib=rb-=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=1024&h=1024&q=80"
+							src="https://images.unsplash.com/photo-1550525811-e5869dd03032?ixlib=rb-=eyJhcHBfaWQiOjEyMDd9&auto=compress&fm=webp&fit=facearea&facepad=2&w=1024&h=1024&q=60"
 							alt="" />
 						<div class="text-sm leading-6">
 							<div class="font-semibold text-gray-900 dark:text-slate-400">{{ item.name }}</div>

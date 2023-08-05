@@ -20,6 +20,7 @@ export default defineConfig(({ mode, command }: ConfigEnv): UserConfig => {
 			},
 		},
 		root,
+		
 		css: {
 			transformer: 'postcss',
 		},
@@ -35,6 +36,7 @@ export default defineConfig(({ mode, command }: ConfigEnv): UserConfig => {
 			cssMinify: 'lightningcss',
 			outDir: 'dist',
 			minify: 'terser',
+
 			terserOptions: {
 				compress: {
 					drop_console: viteEnv.VITE_DROP_CONSOLE,

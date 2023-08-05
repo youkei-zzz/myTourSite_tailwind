@@ -1,7 +1,7 @@
 <template>
 	<div class="light-mode-hero dark:dark-mode-hero bg-no-repeat bg-contain box-border aspect-[1/0.5] dark:aspect-[1/0.45] transform-cpu w-screen relative overflow-x-hidden">
 		<img
-			src="https://i.imgtg.com/2023/05/14/OMB1YP.png"
+			src="@/assets/image/car.webp"
 			class="dark:hidden select-none animate-[carmove_8s_alternate-reverse_infinite_linear] w-[45vw] absolute my-[calc(1vw+1vh+15%)] mx-[calc(1vw+1vh+15%)] transform-cpu"
 			alt="首页背景" />
 		<div class="hidden dark:block">

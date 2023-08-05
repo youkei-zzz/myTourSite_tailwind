@@ -75,7 +75,7 @@ const products = [
 		duration: '5天',
 		price: '￥3999',
 		href: '#',
-		imageSrc: 'https://i.imgtg.com/2023/07/23/OhDUZ1.jpg',
+		imageSrc: 'https://i.imgtg.com/2023/07/28/OiZ16j.webp',
 		imageAlt: 'Black machined steel pen with hexagonal grip and small white logo at top.',
 	},
 
@@ -85,7 +85,7 @@ const products = [
 		duration: '7天',
 		price: '￥5999',
 		href: '#',
-		imageSrc: 'https://i.imgtg.com/2023/07/23/OhDTBG.jpg',
+		imageSrc: 'https://i.imgtg.com/2023/07/28/OiZNkp.webp',
 		imageAlt: '难以忘记的美景',
 	},
 	{
