@@ -1,5 +1,5 @@
 <template>
-	<TransitionRoot :show="open" as="template" @after-leave="query = ''" appear>
+	<TransitionRoot :show="open" as="template" @after-leave="afterLeave()" appear>
 		<Dialog as="div" class="relative z-50" @close="open = false">
 			<TransitionChild
 				as="template"
@@ -21,30 +21,34 @@
 					leave="ease-in duration-200"
 					leave-from="opacity-100 scale-100"
 					leave-to="opacity-0 scale-95">
-					<DialogPanel class="mx-auto transform rounded-xl bg-white p-2 shadow-2xl ring-1 ring-black ring-opacity-5 transition-all">
+					<DialogPanel
+						class="mx-auto transform rounded-xl bg-white dark:bg-gray-900 divide-y divide-slate-500 dark:divide-slate-50 dark:divide-opacity-20 divide-opacity-40 p-2 shadow-2xl ring-1 ring-black ring-opacity-5 transition-all">
 						<Combobox @update:modelValue="onSelect">
 							<div class="relative">
 								<MagnifyingGlassIcon v-if="!showSearchAnimation" class="pointer-events-none absolute left-4 top-3.5 h-5 w-5 text-gray-400" aria-hidden="true" />
 								<i v-else class="fa-solid fa-sync fa-spin pointer-events-none absolute left-4 top-4 text-gray-400"></i>
 
 								<ComboboxInput
-									class="h-12 w-full border-0 bg-transparent pl-11 pr-4 text-gray-900 placeholder:text-gray-400 focus:ring-0 sm:text-sm"
+									spellcheck="false"
+									autocorrect="off"
+									autocomplete="off"
+									autocapitalize="off"
+									class="h-12 w-full border-0 bg-transparent pl-11 pr-4 placeholder:text-gray-500 focus:ring-0 sm:text-sm"
 									placeholder="搜索一下..."
 									@change="handlesInput($event.target.value)" />
 							</div>
 
-							<ComboboxOptions v-if="1 > 0" static class="-mb-2 max-h-72 scroll-py-2 overflow-y-auto py-2 text-sm text-gray-800">
+							<ComboboxOptions static class="-mb-2 max-h-72 scroll-py-2 overflow-y-auto py-2 text-sm text-gray-800">
 								<ComboboxOption v-for="scenery in searchResults" :key="scenery.id" :value="scenery" as="template" v-slot="{ active }">
-									<li :class="['cursor-default select-none rounded-md px-4 py-2', active && 'bg-indigo-600 text-white']">
+									<li :class="['cursor-default select-none rounded-md px-4 py-2 dark:text-white', active && 'bg-gray-500 text-white']">
 										{{ scenery.name }}
 									</li>
 								</ComboboxOption>
+								<div v-if="showTip" class="px-4 py-14 text-center sm:px-14">
+									<QuestionMarkCircleIcon class="mx-auto h-6 w-6 text-gray-400" aria-hidden="true" />
+									<p class="mt-4 text-sm text-gray-900 dark:text-white font-primary font-bold tracking-widest">{{ TipString }}</p>
+								</div>
 							</ComboboxOptions>
-
-							<div v-if="showTip" class="px-4 py-14 text-center sm:px-14">
-								<QuestionMarkCircleIcon class="mx-auto h-6 w-6 text-gray-400" aria-hidden="true" />
-								<p class="mt-4 text-sm text-gray-900 font-primary font-bold tracking-widest">啊哦，好像没找到</p>
-							</div>
 						</Combobox>
 					</DialogPanel>
 				</TransitionChild>
@@ -65,8 +69,9 @@ import { ref } from 'vue';
 const open = ref(false);
 const query = ref('');
 const showTip = ref(false);
+const TipString = ref('啊哦，好像没找到');
 const searchResults = ref<any[]>();
-const showSearchAnimation = ref(false);
+const showSearchAnimation = ref(true);
 const algoliaClient = algoliasearch(`${import.meta.env.VITE_Algolia_ID}`, `${import.meta.env.VITE_Algolia_KEY}`);
 const index = algoliaClient.initIndex('my_first_index');
 const handleSearch = useThrottleFn((query: string) => {
@@ -91,8 +96,8 @@ index
 		index
 			.search('', { numericFilters: `rating>=0.5` })
 			.then(({ hits }) => {
-				console.log(hits);
 				searchResults.value = hits as City.cityInfo[];
+				showSearchAnimation.value = false;
 			})
 			.catch((err) => {
 				emitter.emit('error', '获取热点活动失败');
@@ -103,6 +108,9 @@ index
 	})
 	.catch((err) => {
 		emitter.emit('error', '搜索引擎暂时关闭');
+		TipString.value = '搜索引擎暂时关闭';
+		showTip.value = true;
+		showSearchAnimation.value = false;
 	});
 
 function onSelect(person: any) {
@@ -110,11 +118,16 @@ function onSelect(person: any) {
 }
 
 function handlesInput(query: string) {
-	showSearchAnimation.value = true;
+	query && !showSearchAnimation.value && (showSearchAnimation.value = true);
+	!query && (showSearchAnimation.value = false);
 	handleSearch(query);
 }
 
 emitter.on('popover', (val) => {
 	open.value = val;
 });
+function afterLeave() {
+	showSearchAnimation.value = false;
+	query.value = '';
+}
 </script>

@@ -44,10 +44,10 @@
 
 								<div class="flex items-center justify-between">
 									<div class="text-sm leading-6">
-										<button @click.prevent="forgetPassWord" class="font-semibold hover:text-slate-400">忘记密码?</button>
+										<button @click.prevent="forgetPassWord" autofocus="false" class="font-semibold hover:text-slate-400">忘记密码?</button>
 									</div>
 									<div class="text-sm leading-6">
-										<button @click.prevent="register" class="font-semibold hover:text-slate-400">注册</button>
+										<button @click.prevent="register" autofocus="false" class="font-semibold hover:text-slate-400">注册</button>
 									</div>
 								</div>
 

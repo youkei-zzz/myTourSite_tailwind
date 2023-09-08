@@ -10,7 +10,7 @@
 		:pagination="{
 			clickable: true,
 		}"
-		:navigation="dynamicWidth! >= 600"
+		:navigation="dynamicWidth! >= 700"
 		:modules="modules"
 		class="mySwiper my-12">
 		<swiper-slide v-for="item in response_handled?.content">

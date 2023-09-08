@@ -1,5 +1,3 @@
-import './assets/css/global.css';
-import './assets/css/tailwind.css';
 import router from '@/router';
 import pinia from '@/stores';
 import { library } from '@fortawesome/fontawesome-svg-core';
@@ -10,6 +8,8 @@ import {
 	faBullhorn,
 	faCamera,
 	faCaretDown,
+	faCircleArrowUp,
+	faCircleExclamation,
 	faCirclePlus,
 	faCircleQuestion,
 	faCircleUp,
@@ -21,11 +21,11 @@ import {
 	faReplyAll,
 	faRightFromBracket,
 	faSun,
-	faCircleExclamation,
 	faUser,
-	faCircleArrowUp,
 } from '@fortawesome/free-solid-svg-icons';
 import 'animate.css/animate.min.css';
+import './assets/css/global.css';
+import './assets/css/tailwind.css';
 
 import { faFaceFrown, faFaceSadTear, faFaceSmile, faSadCry } from '@fortawesome/free-regular-svg-icons';
 
@@ -78,6 +78,5 @@ library.add(
 //       });
 //   });
 // }
-
 
 app.use(pinia).use(router).mount('#app');
