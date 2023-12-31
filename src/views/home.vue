@@ -1,5 +1,5 @@
 <template>
-	<div>
+	<div class="overflow-hidden">
 		<myHeader class="lg:block hidden"></myHeader>
 		<mySideBar class="lg:hidden block"></mySideBar>
 
