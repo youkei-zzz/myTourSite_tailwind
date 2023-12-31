@@ -1,5 +1,5 @@
 <template>
-	<div class="overflow-hidden">
+	<div class="overflow-x-hidden">
 		<myHeader class="lg:block hidden"></myHeader>
 		<mySideBar class="lg:hidden block"></mySideBar>
 
@@ -175,33 +175,33 @@
 				<div class="relative pb-20 pt-10 sm:pb-16">
 					<div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 relative">
 						<div class="mx-auto max-w-2xl lg:max-w-4xl lg:px-12">
-							<h1 class="text-3xl font-bold justify-self-center text-blue-600 sm:text-6xl sm:justify-center"><span class="sr-only">Tralive - </span>探索世界，分享心动瞬间</h1>
-							<div class="mt-6 space-y-6 text-base tracking-tight text-blue-900">
+							<h1 class="text-3xl font-bold justify-self-center text-blue-600 dark:text-slate-300 sm:text-6xl sm:justify-center"><span class="sr-only">Tralive - </span>探索世界，分享心动瞬间</h1>
+							<div class="mt-6 space-y-6 text-base tracking-tight text-blue-900 dark:text-slate-400">
 								<p>无论是穿越大陆还是漫游异国风情，让我们一同记录这段充满激情的旅途。每一张照片都是生命中的璀璨瞬间，是对大自然之美的独特感悟。</p>
 								<p>在这里，您将发现分享是一种美好的交流方式。与您一同分享最新的旅行心得，一同感受每个旅行者的独特视角，让这个平台成为我们共同记录与交流的精彩空间。</p>
 							</div>
 							<a
-								class="inline-flex justify-center rounded-2xl bg-blue-600 p-4 text-base font-semibold text-white hover:bg-blue-500 focus:outline-none focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue-500 active:text-white/70 mt-10 w-full sm:hidden"
+								class="inline-flex justify-center rounded-2xl bg-blue-600 dark:text-slate-400 p-4 text-base font-semibold text-white hover:bg-blue-500 focus:outline-none focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue-500 active:text-white/70 mt-10 w-full sm:hidden"
 								href="/#">
 								获取更多旅行灵感
 							</a>
 							<dl
 								class="mt-10 grid grid-cols-2 gap-x-10 gap-y-6 sm:mt-16 sm:gap-x-16 sm:gap-y-10 sm:text-center lg:auto-cols-auto lg:grid-flow-col lg:grid-cols-none lg:justify-start lg:text-left text-center">
 								<div>
-									<dt class="font-primary text-base text-blue-600">照片分享</dt>
-									<dd class="mt-0.5 text-2xl font-semibold tracking-tight text-blue-900">689</dd>
+									<dt class="font-primary text-base text-blue-600 dark:text-slate-400">照片分享</dt>
+									<dd class="mt-0.5 text-2xl font-semibold tracking-tight text-blue-900 dark:text-slate-400">689</dd>
 								</div>
 								<div>
-									<dt class="font-primary text-base text-blue-600">互动参与者</dt>
-									<dd class="mt-0.5 text-2xl font-semibold tracking-tight text-blue-900">1,245</dd>
+									<dt class="font-primary text-base text-blue-600 dark:text-slate-400">互动参与者</dt>
+									<dd class="mt-0.5 text-2xl font-semibold tracking-tight text-blue-900 dark:text-slate-400">1,245</dd>
 								</div>
 								<div>
-									<dt class="font-primary text-base text-blue-600">平台</dt>
-									<dd class="mt-0.5 text-2xl font-semibold tracking-tight text-blue-900">Tralive</dd>
+									<dt class="font-primary text-base text-blue-600 dark:text-slate-400">平台</dt>
+									<dd class="mt-0.5 text-2xl font-semibold tracking-tight text-blue-900 dark:text-slate-400">Tralive</dd>
 								</div>
 								<div>
-									<dt class="font-primary text-base text-blue-600">在线时长</dt>
-									<dd class="mt-0.5 text-2xl font-semibold tracking-tight text-blue-900">300天</dd>
+									<dt class="font-primary text-base text-blue-600 dark:text-slate-400">在线时长</dt>
+									<dd class="mt-0.5 text-2xl font-semibold tracking-tight text-blue-900 dark:text-slate-400">300天</dd>
 								</div>
 							</dl>
 						</div>
