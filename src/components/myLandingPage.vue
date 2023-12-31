@@ -8,9 +8,14 @@
 
 			<div class="stats shadow-lg border w-full lg:w-auto dark:bg-slate-700">
 				<div class="stat">
-					<div class="stat-title">综合得分：</div>
-					<div class="stat-value text-2xl">9.8</div>
-					<!-- <div class="stat-desc">较上个月增长<strong>21%</strong></div> -->
+					<div class="stat-title">
+						综合得分：<span class="stat-value text-xl">{{ rankingScore }}</span>
+					</div>
+
+					<div class="flex gap-x-1 text-secondary">
+						<StarIcon class="h-5 w-5 flex-none" aria-hidden="true" v-for="score in Math.round(rankingScore)" />
+					</div>
+					<div class="lg:stat-figure stat-desc pt-5">当前排名为前<strong>{{rankingScore<<3}}%</strong></div>
 				</div>
 			</div>
 		</div>
@@ -44,8 +49,10 @@
 <script setup lang="ts">
 import imagesloaded from 'imagesloaded';
 import picInfo from '@/components/interface/picInfo';
-import { onMounted } from 'vue';
+import { StarIcon } from '@heroicons/vue/20/solid';
+import { onMounted, ref } from 'vue';
 
+let rankingScore = ref(Math.round(Math.random() + 3));
 const lists: picInfo[] = [
 	{
 		imgUrl: 'https://source.unsplash.com/1240x874/?thailand,beach,sig=168&auto=compress&fm=webp',

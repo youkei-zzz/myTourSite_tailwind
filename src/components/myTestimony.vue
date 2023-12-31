@@ -18,11 +18,7 @@
 				<figure class="mx-auto max-w-2xl">
 					<p class="sr-only">5 out of 5 stars</p>
 					<div class="flex gap-x-1 text-secondary">
-						<StarIcon class="h-5 w-5 flex-none" aria-hidden="true" />
-						<StarIcon class="h-5 w-5 flex-none" aria-hidden="true" />
-						<StarIcon class="h-5 w-5 flex-none" aria-hidden="true" />
-						<StarIcon class="h-5 w-5 flex-none" aria-hidden="true" />
-						<StarIcon class="h-5 w-5 flex-none" aria-hidden="true" />
+						<StarIcon class="h-5 w-5 flex-none" aria-hidden="true" v-for="item in Math.round(Math.random() + 3)" />
 					</div>
 					<blockquote class="mt-10 text-xl font-semibold leading-8 tracking-tight text-gray-900 dark:text-slate-400 sm:text-2xl sm:leading-9 line-clamp-4">
 						<p>
