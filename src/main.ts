@@ -1,7 +1,7 @@
 import router from '@/router';
 import pinia from '@/stores';
-import { CacheFirst } from 'workbox-strategies';
-import { registerRoute } from 'workbox-routing';
+// import { CacheFirst } from 'workbox-strategies';
+// import { registerRoute } from 'workbox-routing';
 import { library } from '@fortawesome/fontawesome-svg-core';
 import {
 	fa1,
@@ -86,9 +86,9 @@ library.add(
 // 	}),
 // );
 
-import * as navigationPreload from 'workbox-navigation-preload';
-import { NetworkFirst } from 'workbox-strategies';
-import { NavigationRoute } from 'workbox-routing';
+// import * as navigationPreload from 'workbox-navigation-preload';
+// import { NetworkFirst } from 'workbox-strategies';
+// import { NavigationRoute } from 'workbox-routing';
 
 // Enable navigation preload.
 // navigationPreload.enable();
