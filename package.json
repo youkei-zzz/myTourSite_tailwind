@@ -9,7 +9,6 @@
   "scripts": {
     "dev": "vite --host",
     "build:pro": "vue-tsc && vite build --mode production",
-    "build": "vue-tsc && vite build --mode production",
     "preview": "vite preview"
   },
   "dependencies": {
