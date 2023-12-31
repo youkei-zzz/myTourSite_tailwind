@@ -17,7 +17,7 @@
 				</router-link>
 			</span>
 
-			<span class="dropdown dropdown-hover">
+			<span class="dropdown dropdown-hover z-[999]">
 				<font-awesome-icon :icon="['fas', 'compass']" class="pr-1" />
 				<a href="javascript:void(0)" tabindex="0" class="m-1 font-primary font-bold cursor-pointer">活动</a>
 				<ul tabindex="0" class="dropdown-content z-[1] menu p-2 shadow-2xl bg-slate-50 dark:bg-slate-600 rounded-box w-52">

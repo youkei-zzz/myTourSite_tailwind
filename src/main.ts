@@ -1,5 +1,7 @@
 import router from '@/router';
 import pinia from '@/stores';
+import { CacheFirst } from 'workbox-strategies';
+import { registerRoute } from 'workbox-routing';
 import { library } from '@fortawesome/fontawesome-svg-core';
 import {
 	fa1,
@@ -38,7 +40,6 @@ const app = createApp(App);
 
 app.config.globalProperties.$dynamicWidth = throttledRef(useWindowSize().width, 450);
 app.component('font-awesome-icon', FontAwesomeIcon);
-
 library.add(
 	faCircleArrowUp,
 	faRightFromBracket,
@@ -65,7 +66,6 @@ library.add(
 	faFaceFrown,
 	faSadCry,
 );
-// main.js
 
 // if ('serviceWorker' in navigator) {
 //   window.addEventListener('load', () => {
@@ -79,4 +79,34 @@ library.add(
 //   });
 // }
 
+// registerRoute(
+// 	({ request }) => request.destination === 'image',
+// 	new CacheFirst({
+// 		cacheName: 'image-cache',
+// 	}),
+// );
+
+import * as navigationPreload from 'workbox-navigation-preload';
+import { NetworkFirst } from 'workbox-strategies';
+import { NavigationRoute } from 'workbox-routing';
+
+// Enable navigation preload.
+// navigationPreload.enable();
+
+// Swap in NetworkOnly, CacheFirst, or StaleWhileRevalidate as needed.
+// const strategy = new NetworkFirst({
+// 	cacheName: 'cached-navigations',
+// 	plugins: [
+// 		// Any plugins, like `ExpirationPlugin`, etc.
+// 	],
+// });
+
+// const navigationRoute = new NavigationRoute(strategy, {
+// 	// Optionally, provide a allow/denylist of RegExps to determine
+// 	// which paths will match this route.
+// 	// allowlist: [],
+// 	// denylist: [],
+// });
+
+// registerRoute(navigationRoute);
 app.use(pinia).use(router).mount('#app');
