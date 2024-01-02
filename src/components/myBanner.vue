@@ -1,5 +1,9 @@
 <template>
-	<div id="err" ref="Err" v-if="errorArr.length !== 0 && show_error_again === 'true'" class="absolute space-y-3 top-full animate__animated animate__fadeInUp inset-x-0 bottom-0 z-30">
+	<div
+		id="err"
+		ref="Err"
+		v-if="errorArr.length !== 0 && show_error_again === 'true'"
+		class="absolute space-y-3 top-full animate__animated animate__fadeInUp inset-x-0 bottom-0 z-30">
 		<el-alert
 			v-for="(item, index) in errorArr"
 			:key="index"
@@ -8,7 +12,7 @@
 			:close-text="index === 0 ? '不再提示' : ''"
 			@close.prevent="handleErrorClose(index)"
 			style="padding: 20px 20px"
-			class="animate__animated animate__fadeInDown animate__delay-slow">
+			class="animate__animated animate__delay-slow">
 			<template #default>
 				<div class="text-sm font-semibold font-primary">
 					<strong class="font-semibold font-primary">啊哦! 😯</strong>
@@ -52,7 +56,7 @@
 <script setup lang="ts">
 import emitter from '@utils/emitter';
 import { useStorage } from '@vueuse/core';
-import { gsap } from 'gsap';
+// import { gsap } from 'gsap';
 import { getCurrentInstance, ref } from 'vue';
 import { useRouter } from 'vue-router';
 
@@ -89,17 +93,23 @@ let handleErrorClose = (index: number) => {
 		Err.value?.classList.add('animate__fadeOutDown');
 		Err.value?.classList.remove('animate__fadeInUp');
 	}
-	gsap.to('#err', {
-		duration: 1.5,
-		onComplete: () => {
-			if (index === 0) {
-				Err.value?.classList.add('pointer-events-none');
-				// errorBanner.value = undefined;
-				show_error_again.value = 'false';
-				errorArr.value = [];
-			}
-		},
-	});
+	// gsap.to('#err', {
+	// 	duration: 1.5,
+	// 	onComplete: () => {
+	// 		if (index === 0) {
+	// 			Err.value?.classList.add('pointer-events-none');
+	// 			// errorBanner.value = undefined;
+	// 			show_error_again.value = 'false';
+	// 			errorArr.value = [];
+	// 		}
+	// 	},
+	// });
+	if (index === 0) {
+		Err?.value?.style;
+		Err.value?.classList.add('pointer-events-none');
+		show_error_again.value = 'false';
+		errorArr.value = [];
+	}
 };
 
 let handleNotifyClose = (index: number) => {
@@ -110,17 +120,17 @@ let handleNotifyClose = (index: number) => {
 		Norm.value?.classList.add('animate__fadeOutDown');
 		Norm.value?.classList.remove('animate__fadeInUp');
 	}
-	gsap.to('#norm', {
-		duration: 1.5,
-		onComplete: () => {
-			console.log('complete');
-			if (index === 0) {
-				Norm.value?.classList.add('pointer-events-none');
-				notifyBanner.value = undefined;
-				show_notify_again.value = 'false';
-			}
-		},
-	});
+	// gsap.to('#norm', {
+	// 	duration: 1.5,
+	// 	onComplete: () => {
+	// 		console.log('complete');
+	// 	},
+	// });
+	if (index === 0) {
+		Norm.value?.classList.add('pointer-events-none');
+		notifyBanner.value = undefined;
+		show_notify_again.value = 'false';
+	}
 };
 </script>
 

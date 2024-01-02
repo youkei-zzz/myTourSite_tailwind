@@ -29,4 +29,4 @@ src/assets/scss
 # env文件
 *.env*
 warp.js
-playground.mongodb.js
+stats.html

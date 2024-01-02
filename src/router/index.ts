@@ -26,9 +26,10 @@ const router = createRouter({
 		{
 			path: '/travel',
 			name: 'Travel',
-			redirect: () => {
-				return { path: '/error', query: { error_code: '500' } };
-			},
+			// redirect: () => {
+			// 	return { path: '/error', query: { error_code: '500' } };
+			// },
+			component: ()=> import('@/views/travel.vue')
 		},
 
 		{

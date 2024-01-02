@@ -50,9 +50,6 @@ dependencies:
   element-plus:
     specifier: ^2.4.4
     version: 2.4.4(vue@3.4.2)
-  gsap:
-    specifier: ^3.12.4
-    version: 3.12.4
   imagesloaded:
     specifier: ^5.0.0
     version: 5.0.0
@@ -71,9 +68,6 @@ dependencies:
   swiper:
     specifier: ^9.4.1
     version: 9.4.1
-  tinymce:
-    specifier: ^6.8.2
-    version: 6.8.2
   vue:
     specifier: ^3.4.2
     version: 3.4.2(typescript@5.3.3)
@@ -118,6 +112,9 @@ devDependencies:
   terser:
     specifier: ^5.26.0
     version: 5.26.0
+  tinymce:
+    specifier: ^6.8.2
+    version: 6.8.2
   typescript:
     specifier: ^5.3.3
     version: 5.3.3
@@ -3020,10 +3017,6 @@ packages:
     resolution: {integrity: sha512-RbJ5/jmFcNNCcDV5o9eTnBLJ/HszWV0P73bc+Ff4nS/rJj+YaS6IGyiOL0VoBYX+l1Wrl3k63h/KrH+nhJ0XvQ==}
     dev: true
 
-  /gsap@3.12.4:
-    resolution: {integrity: sha512-1ByAq8dD0W4aBZ/JArgaQvc0gyUfkGkP8mgAQa0qZGdpOKlSOhOf+WNXjoLimKaKG3Z4Iu6DKZtnyszqQeyqWQ==}
-    dev: false
-
   /has-bigints@1.0.2:
     resolution: {integrity: sha512-tSvCKtBr9lkF0Ex0aQiP9N+OpV4zi2r/Nee5VkRDbaqv35RLYMzbwQfFSZZH0kR+Rd6302UJZ2p/bJCEoR3VoQ==}
     dev: true
@@ -4322,7 +4315,6 @@ packages:
 
   /tinymce@6.8.2:
     resolution: {integrity: sha512-Lho79o2Y1Yn+XdlTEkHTEkEmzwYWTXz7IUsvPwxJF3VTtgHUIAAuBab29kik+f2KED3rZvQavr9D7sHVMJ9x4A==}
-    dev: false
 
   /to-fast-properties@2.0.0:
     resolution: {integrity: sha512-/OaKK0xYrs3DmxRYqL/yDc+FxFUVYhDlXMhRmv3z915w2HF1tnN1omB354j8VUGO/hbRzyD6Y3sA7v7GS/ceog==}

@@ -23,7 +23,7 @@
 		<div class="grid gap-6 row-gap-5 mb-8 lg:grid-cols-4 sm:row-gap-6 sm:grid-cols-2">
 			<a href="/" aria-label="View Item" v-for="item in lists" :key="item.name" class="pointer-events-none">
 				<div class="ImgContainer relative overflow-hidden transition duration-200 transform rounded shadow-lg hover:-translate-y-2 hover:shadow-2xl">
-					<img :ref="item.name" :data-idx="item.idx" class="object-cover w-full h-56 md:h-64 xl:h-80" :src="item.imgUrl" />
+					<img :ref="item.name" :data-idx="item.idx" fetchpriority="high" class="object-cover w-full h-56 md:h-64 xl:h-80" :src="item.imgUrl" />
 					<div
 						:class="item.name"
 						class="mask absolute flex place-content-center place-items-center inset-0 px-6 py-4 transition-opacity duration-300 bg-black bg-opacity-75 animate__animated">

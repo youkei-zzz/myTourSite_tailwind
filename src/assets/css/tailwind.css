@@ -6,10 +6,4 @@
 	.light-mode-hero {
 		background-image: url('@/assets/image/light-mode-hero.webp');
 	}
-	.dark-mode-hero {
-		background-image: url('@/assets/svg/dark-mode-hero.svg');
-		background-position-x: center;
-		background-repeat: repeat-x;
-		background-size: contain;
-	}
 }

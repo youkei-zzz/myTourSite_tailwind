@@ -175,7 +175,9 @@
 				<div class="relative pb-20 pt-10 sm:pb-16">
 					<div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 relative">
 						<div class="mx-auto max-w-2xl lg:max-w-4xl lg:px-12">
-							<h1 class="text-3xl font-bold justify-self-center text-blue-600 dark:text-slate-300 sm:text-6xl sm:justify-center"><span class="sr-only">Tralive - </span>探索世界，分享心动瞬间</h1>
+							<h1 class="text-3xl font-bold justify-self-center text-blue-600 dark:text-slate-300 sm:text-6xl sm:justify-center">
+								<span class="sr-only">Tralive - </span>探索世界，分享心动瞬间
+							</h1>
 							<div class="mt-6 space-y-6 text-base tracking-tight text-blue-900 dark:text-slate-400">
 								<p>无论是穿越大陆还是漫游异国风情，让我们一同记录这段充满激情的旅途。每一张照片都是生命中的璀璨瞬间，是对大自然之美的独特感悟。</p>
 								<p>在这里，您将发现分享是一种美好的交流方式。与您一同分享最新的旅行心得，一同感受每个旅行者的独特视角，让这个平台成为我们共同记录与交流的精彩空间。</p>
@@ -230,43 +232,10 @@ import landingPage from '@components/myLandingPage.vue';
 import myPrice from '@components/myPrice.vue';
 import mySideBar from '@components/mySideBar.vue';
 import Testimony from '@components/myTestimony.vue';
-import { gsap } from 'gsap';
-import { ScrollTrigger } from 'gsap/ScrollTrigger';
-import { onMounted } from 'vue';
+// import { ScrollTrigger } from 'gsap/ScrollTrigger';
+// import { onMounted } from 'vue';
 
-gsap.registerPlugin(ScrollTrigger);
-onMounted(() => {
-	const tl1 = gsap.timeline({
-		scrollTrigger: {
-			trigger: '#ad1',
-			start: 'top-=130 60%',
-			end: 'center 40%',
-			scrub: 3,
-			toggleActions: 'play none none none',
-		},
-	});
-	const tl2 = gsap.timeline({
-		scrollTrigger: {
-			trigger: '#ad2',
-			start: 'top-=100 60%',
-			end: 'center 40%',
-			scrub: 3,
-			toggleActions: 'play none reverse none',
-		},
-	});
-	const tl3 = gsap.timeline({
-		scrollTrigger: {
-			trigger: '#ad3',
-			start: 'top-=70 60%',
-			end: 'center 40%',
-			scrub: 3,
-			toggleActions: 'play none reverse none',
-		},
-	});
-	tl1.from('#ad1', { opacity: 0 }).to('#ad1', { opacity: 1, duration: 1 });
-	tl2.from('#ad2', { opacity: 0 }).to('#ad2', { opacity: 1, duration: 1 });
-	tl3.from('#ad3', { opacity: 0 }).to('#ad3', { opacity: 1, duration: 1 });
-});
+// gsap.registerPlugin(ScrollTrigger);
 </script>
 
 <style>

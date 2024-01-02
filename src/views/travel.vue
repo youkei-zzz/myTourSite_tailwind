@@ -2,19 +2,19 @@
 	<div class="relative">
 		<progress max="100" value="0" class="absolute z-50"></progress>
 		<div>
-			<div ref="loader" class="fixed top-0 left-0 right-0 bottom-0 dark:bg-slate-800 z-50 animate__animated transition-all duration-200">
+			<!-- <div ref="loader" class="fixed top-0 left-0 right-0 bottom-0 dark:bg-slate-800 z-50 animate__animated transition-all duration-200">
 				<myTransition :percentage="loadingPercentage"></myTransition>
+			</div> -->
+			<div class="flex items-center justify-between p-5">
+				<a @click.prevent="router.back()" class="w-10 hover:dark:text-slate-100 hover:text-slate-400 transition-colors duration-200 hover:cursor-pointer">
+					<component :is="ArrowLeftIcon" aria-hidden="true" />
+				</a>
+
+				<myToggleTheme class="text-right"></myToggleTheme>
 			</div>
-
-			<div ref="contentWrapper" class="hidden animate__animated animate__delay-1.5s">
+			<!-- <div ref="contentWrapper" class="hidden animate__animated ">
 				<div class="content1_laptop animate__animated">
-					<div class="flex items-center justify-between p-5">
-						<a @click.prevent="router.back()" class="w-10 hover:dark:text-slate-100 hover:text-slate-400 transition-colors duration-200 hover:cursor-pointer">
-							<component :is="ArrowSmallLeftIcon" aria-hidden="true" />
-						</a>
-
-						<myToggleTheme class="text-right"></myToggleTheme>
-					</div>
+					
 					<div class="chat chat-start animate__animated animate__fadeInLeft pl-[5vw]">
 						<div class="chat-bubble">You underestimate my power!</div>
 					</div>
@@ -27,7 +27,7 @@
 					</div>
 				</div>
 
-				<div v-show="dynamicWidth >= 600" class="content2_laptop animate__animated">
+				<div  class="content2_laptop animate__animated">
 					<header class="flex items-center justify-center h-screen">
 						<div>
 							<h1 class="mb-[5vh] text-[5rem]">难忘的旅途回忆</h1>
@@ -110,99 +110,10 @@
 					</section>
 				</div>
 
-				<div v-show="dynamicWidth < 600" class="content3_phone">
-					<div ref="content_1_Phone" class="mt-4">
-						<div class="carousel bg-transparent carousel-center p-4 space-x-4 rounded-box">
-							<div class="carousel-item">
-								<img src="https://source.unsplash.com/256x155/?china,city,sig=124&auto=compress&fm=webp" class="rounded-box" />
-							</div>
-							<div class="carousel-item">
-								<img src="https://source.unsplash.com/256x155/?japan,city,sig=82&auto=compress&fm=webp" class="rounded-box" />
-							</div>
-							<div class="carousel-item">
-								<img src="https://source.unsplash.com/256x155/?greece,city,sig=128&auto=compress&fm=webp" class="rounded-box" />
-							</div>
-							<div class="carousel-item">
-								<img src="https://source.unsplash.com/256x155/?thailand,city,sig=168&auto=compress&fm=webp" class="rounded-box" />
-							</div>
-							<div class="carousel-item">
-								<img src="https://source.unsplash.com/256x155/?france,city,sig=139&auto=compress&fm=webp" class="rounded-box" />
-							</div>
-							<div class="carousel-item">
-								<img src="https://source.unsplash.com/256x155/?united kingdom,city,sig=39&auto=compress&fm=webp" class="rounded-box" />
-							</div>
-						</div>
-					</div>
-					<div ref="content_2_phone" class="mt-4">
-						<div class="carousel bg-transparent carousel-end p-4 space-x-4 rounded-box">
-							<div class="carousel-item">
-								<img src="https://source.unsplash.com/256x155/?china,mountains,sig=124&auto=compress&fm=webp" class="rounded-box" />
-							</div>
-							<div class="carousel-item">
-								<img src="https://source.unsplash.com/256x155/?japan,mountains,sig=82&auto=compress&fm=webp" class="rounded-box" />
-							</div>
-							<div class="carousel-item">
-								<img src="https://source.unsplash.com/256x155/?greece,mountains,sig=128&auto=compress&fm=webp" class="rounded-box" />
-							</div>
-							<div class="carousel-item">
-								<img src="https://source.unsplash.com/256x155/?thailand,mountains,sig=168&auto=compress&fm=webp" class="rounded-box" />
-							</div>
-							<div class="carousel-item">
-								<img src="https://source.unsplash.com/256x155/?france,mountains,sig=139&auto=compress&fm=webp" class="rounded-box" />
-							</div>
-							<div class="carousel-item">
-								<img src="https://source.unsplash.com/256x155/?united kingdom,mountains,sig=39&auto=compress&fm=webp" class="rounded-box" />
-							</div>
-						</div>
-					</div>
-					<div ref="content_3_phone" class="mt-4">
-						<div class="carousel bg-transparent carousel-end p-4 space-x-4 rounded-box">
-							<div class="carousel-item">
-								<img src="https://source.unsplash.com/256x155/?china,sea,sig=124&auto=compress&fm=webp" class="rounded-box" />
-							</div>
-							<div class="carousel-item">
-								<img src="https://source.unsplash.com/256x155/?japan,sea,sig=82&auto=compress&fm=webp" class="rounded-box" />
-							</div>
-							<div class="carousel-item">
-								<img src="https://source.unsplash.com/256x155/?greece,sea,sig=128&auto=compress&fm=webp" class="rounded-box" />
-							</div>
-							<div class="carousel-item">
-								<img src="https://source.unsplash.com/256x155/?thailand,sea,sig=168&auto=compress&fm=webp" class="rounded-box" />
-							</div>
-							<div class="carousel-item">
-								<img src="https://source.unsplash.com/256x155/?france,sea,sig=139&auto=compress&fm=webp" class="rounded-box" />
-							</div>
-							<div class="carousel-item">
-								<img src="https://source.unsplash.com/256x155/?united kingdom,sea,sig=39&auto=compress&fm=webp" class="rounded-box" />
-							</div>
-						</div>
-					</div>
-					<div ref="content_4_phone" class="mt-4">
-						<div class="carousel bg-transparent carousel-item p-4 space-x-4 rounded-box">
-							<div class="carousel-item">
-								<img src="https://source.unsplash.com/256x155/?china,forest,sig=124&auto=compress&fm=webp" class="rounded-box" />
-							</div>
-							<div class="carousel-item">
-								<img src="https://source.unsplash.com/256x155/?japan,forest,sig=82&auto=compress&fm=webp" class="rounded-box" />
-							</div>
-							<div class="carousel-item">
-								<img src="https://source.unsplash.com/256x155/?greece,forest,sig=128&auto=compress&fm=webp" class="rounded-box" />
-							</div>
-							<div class="carousel-item">
-								<img src="https://source.unsplash.com/256x155/?thailand,forest,sig=168&auto=compress&fm=webp" class="rounded-box" />
-							</div>
-							<div class="carousel-item">
-								<img src="https://source.unsplash.com/256x155/?france,forest,sig=139&auto=compress&fm=webp" class="rounded-box" />
-							</div>
-							<div class="carousel-item">
-								<img src="https://source.unsplash.com/256x155/?united kingdom,forest,sig=39&auto=compress&fm=webp" class="rounded-box" />
-							</div>
-						</div>
-					</div>
-				</div>
+			 
 
 				<MyFooter></MyFooter>
-			</div>
+			</div> -->
 		</div>
 	</div>
 </template>
@@ -210,10 +121,10 @@
 <script setup lang="ts">
 import MyFooter from '@/components/myFooter.vue';
 import myTransition from '@/components/myTransition.vue';
-import { ArrowSmallLeftIcon } from '@heroicons/vue/24/outline';
-import { gsap } from 'gsap';
-import { ScrollTrigger } from 'gsap/ScrollTrigger';
-import imagesLoaded from 'imagesloaded';
+import { ArrowLeftIcon } from '@heroicons/vue/24/outline';
+// import { gsap } from 'gsap';
+// import { ScrollTrigger } from 'gsap/ScrollTrigger';
+// import imagesLoaded from 'imagesloaded';
 import { getCurrentInstance, onMounted, ref } from 'vue';
 import { useRouter } from 'vue-router';
 
@@ -226,63 +137,63 @@ const router = useRouter();
 const dynamicWidth = getCurrentInstance()?.appContext.config.globalProperties.$dynamicWidth!;
 
 document.documentElement.dataset.theme = (sessionStorage.getItem('theme') as string) ?? 'light';
-gsap.registerPlugin(ScrollTrigger);
-onMounted(() => {
-	const images = gsap.utils.toArray('img');
-	const updateProgress = (instance: any) => (loadingPercentage.value = Math.round((instance.progressedCount * 100) / images.length));
+// gsap.registerPlugin(ScrollTrigger);
+// onMounted(() => {
+// 	const images = gsap.utils.toArray('img');
+// 	const updateProgress = (instance: any) => (loadingPercentage.value = Math.round((instance.progressedCount * 100) / images.length));
 
-	gsap.to('progress', {
-		value: 100,
-		ease: 'none',
-		scrollTrigger: { scrub: 0.3 },
-	});
+// 	gsap.to('progress', {
+// 		value: 100,
+// 		ease: 'none',
+// 		scrollTrigger: { scrub: 0.3 },
+// 	});
 
-	const showDemo = () => {
-		document.body.style.overflowX = 'hidden';
-		document.scrollingElement?.scrollTo(0, 0);
+// 	const showDemo = () => {
+// 		document.body.style.overflowX = 'hidden';
+// 		document.scrollingElement?.scrollTo(0, 0);
 
-		loader.value?.classList.add('animate__fadeOut', 'pointer-events-none');
-		contentWrapper.value?.classList.remove('hidden');
-		contentWrapper.value?.classList.add('animate__fadeIn');
+// 		loader.value?.classList.add('animate__fadeOut', 'pointer-events-none');
+// 		contentWrapper.value?.classList.remove('hidden');
+// 		contentWrapper.value?.classList.add('animate__fadeIn');
 
-		content2.value?.classList.add('animate__fadeIn');
-		content1.value?.classList.add('animate__fadeIn', 'animate__duration-2s');
+// 		content2.value?.classList.add('animate__fadeIn');
+// 		content1.value?.classList.add('animate__fadeIn', 'animate__duration-2s');
 
-		gsap.utils.toArray<HTMLElement>('section').forEach((section: HTMLElement, index: number) => {
-			const w = section.querySelector('.wrapper')!;
-			const [x, xEnd] = index % 2 ? ['100%', (w.scrollWidth - section.offsetWidth) * -0.5] : [w.scrollWidth * -0.5, 0];
-			gsap.fromTo(
-				w,
-				{ x },
-				{
-					x: xEnd,
-					scrollTrigger: {
-						trigger: section,
-						scrub: 0.5,
-					},
-				},
-			);
-		});
-	};
+// 		gsap.utils.toArray<HTMLElement>('section').forEach((section: HTMLElement, index: number) => {
+// 			const w = section.querySelector('.wrapper')!;
+// 			const [x, xEnd] = index % 2 ? ['100%', (w.scrollWidth - section.offsetWidth) * -0.5] : [w.scrollWidth * -0.5, 0];
+// 			gsap.fromTo(
+// 				w,
+// 				{ x },
+// 				{
+// 					x: xEnd,
+// 					scrollTrigger: {
+// 						trigger: section,
+// 						scrub: 0.5,
+// 					},
+// 				},
+// 			);
+// 		});
+// 	};
 
-	gsap.utils.toArray('section').forEach((section: any, index) => {
-		const w = section.querySelector('.wrapper');
-		const [x, xEnd] = index % 2 ? ['100%', (w - section.offsetWidth) * -1] : [w * -1, 0];
-		gsap.fromTo(
-			w,
-			{ x },
-			{
-				x: xEnd,
-				scrollTrigger: {
-					trigger: section,
-					scrub: 0.5,
-				},
-			},
-		);
-	});
+// 	gsap.utils.toArray('section').forEach((section: any, index) => {
+// 		const w = section.querySelector('.wrapper');
+// 		const [x, xEnd] = index % 2 ? ['100%', (w - section.offsetWidth) * -1] : [w * -1, 0];
+// 		gsap.fromTo(
+// 			w,
+// 			{ x },
+// 			{
+// 				x: xEnd,
+// 				scrollTrigger: {
+// 					trigger: section,
+// 					scrub: 0.5,
+// 				},
+// 			},
+// 		);
+// 	});
 
-	imagesLoaded(images).on('progress', updateProgress).on('always', showDemo);
-});
+// 	imagesLoaded(images).on('progress', updateProgress).on('always', showDemo);
+// });
 </script>
 
 <style scoped>
