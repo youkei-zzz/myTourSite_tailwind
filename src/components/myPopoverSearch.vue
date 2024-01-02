@@ -107,6 +107,8 @@ index
 			});
 	})
 	.catch((err) => {
+		console.log(err);
+		
 		emitter.emit('error', '搜索引擎暂时关闭');
 		TipString.value = '搜索引擎暂时关闭';
 		showTip.value = true;
