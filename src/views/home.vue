@@ -5,8 +5,8 @@
 
 		<main class="pb-[10vh]">
 			<div class="slogan z-50 mt-28 lg:mt-36 mx-auto dark:text-slate-400 text-primary font-bold font-primary text-center mb-2">
-				<h1 class="text-3xl md:text-2xl mi:text-base mb-5">瞬间永存，珍藏终身</h1>
-				<p class="text-xl md:text-xl mi:text-xs w-2/3 mx-auto">令人难忘畅想的旅途近在咫尺，和我们一起开始你的旅程，使你的梦想成真</p>
+				<h1 class="text-3xl md:text-xl mi:text-base mb-5">瞬间永存，珍藏终身</h1>
+				<p class="text-xl md:text-sm mi:text-xs w-2/3 mx-auto">令人难忘畅想的旅途近在咫尺，和我们一起开始你的旅程，使你的梦想成真</p>
 			</div>
 
 			<heroBackground></heroBackground>

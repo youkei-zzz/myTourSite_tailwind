@@ -69,7 +69,7 @@ import { ref } from 'vue';
 const open = ref(false);
 const query = ref('');
 const showTip = ref(false);
-const TipString = ref('啊哦，好像没找到');
+const TipString = ref('');
 const searchResults = ref<any[]>();
 const showSearchAnimation = ref(true);
 const algoliaClient = algoliasearch(`${import.meta.env.VITE_ALGOLIA_ID}`, `${import.meta.env.VITE_ALGOLIA_KEY}`);
@@ -79,6 +79,7 @@ const handleSearch = useThrottleFn((query: string) => {
 	index.search(query).then(({ hits }) => {
 		console.log(hits, typeof hits);
 		if (hits.length === 0) {
+			TipString.value = '啊哦，好像没找到';
 			showTip.value = true;
 		} else {
 			showTip.value = false;
@@ -95,16 +96,15 @@ index
 	.then(() => {
 		index
 			.search('', { numericFilters: `rating>=0.5` })
-			.then(({ hits }) => {
+			.then(({ hits, length }) => {
 				searchResults.value = hits as City.cityInfo[];
 				showSearchAnimation.value = false;
+				
+				console.log(length);
 			})
 			.catch((err) => {
 				emitter.emit('error', '获取热点活动失败');
 			});
-		// index.searchForFacetValues('rating', '', { numericFilters: 'rating>=0.7' }).then(({ facetHits }) => {
-		// 	console.log(facetHits)
-		// })
 	})
 	.catch((err) => {
 		emitter.emit('error', '搜索引擎暂时关闭');
