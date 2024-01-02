@@ -19,13 +19,12 @@ declare interface ViteEnv {
 
 /* 自定义变量 */
 interface ImportMetaEnv extends ViteEnv {
-	readonly VITE_Algolia_ID: string;
-	readonly VITE_Algolia_KEY: string;
+	readonly VITE_ALGOLIA_ID: string;
+	readonly VITE_ALGOLIA_KEY: string;
 	readonly VITE_MAPBOX_TOKEN: string;
 	readonly VITE_TinyMCE_API_KEY: string;
-	readonly VITE_Lottie_MAN: string;
-	readonly VITE_Lottie_MOON: string;
-	readonly VITE_Lottie_FIRE: string;
+	readonly Tencent_COS_SECRETKEY: string;
+	readonly Tencent_COS_SECRETID: string;
 	readonly VITE_Lottie_PENCIL: string;
 	readonly VITE_PERSON_QQ: string;
 	readonly VITE_PERSON_WECHAT: string;

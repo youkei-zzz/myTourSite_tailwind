@@ -9,7 +9,7 @@ import searchItem from '@components/interface/searchItem';
 import algoliasearch from 'algoliasearch';
 import { onBeforeMount, onBeforeUnmount, onMounted } from 'vue';
 
-const searchClient = algoliasearch(`${import.meta.env.VITE_Algolia_ID}`, `${import.meta.env.VITE_Algolia_KEY}`, {});
+const searchClient = algoliasearch(`${import.meta.env.VITE_ALGOLIA_ID}`, `${import.meta.env.VITE_ALGOLIA_KEY}`, {});
 let autocomp: AutocompleteApi<searchItem> | undefined = undefined;
 
 onMounted(() => {

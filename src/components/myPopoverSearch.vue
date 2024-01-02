@@ -72,7 +72,7 @@ const showTip = ref(false);
 const TipString = ref('啊哦，好像没找到');
 const searchResults = ref<any[]>();
 const showSearchAnimation = ref(true);
-const algoliaClient = algoliasearch(`${import.meta.env.VITE_Algolia_ID}`, `${import.meta.env.VITE_Algolia_KEY}`);
+const algoliaClient = algoliasearch(`${import.meta.env.VITE_ALGOLIA_ID}`, `${import.meta.env.VITE_ALGOLIA_KEY}`);
 const index = algoliaClient.initIndex('my_first_index');
 const handleSearch = useThrottleFn((query: string) => {
 	console.log(query);

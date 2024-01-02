@@ -16,48 +16,4 @@
 import lottie from 'lottie-web/build/player/lottie_light';
 import { onBeforeUnmount, onMounted } from 'vue';
 
-// onMounted(() => {
-// 	lottie.loadAnimation({
-// 		container: document.querySelector('#man') as HTMLElement,
-// 		renderer: 'svg',
-// 		loop: true,
-// 		autoplay: true,
-// 		path: `${import.meta.env.VITE_Lottie_MAN}`,
-// 		rendererSettings: {
-// 			preserveAspectRatio: 'xMidYMid slice',
-// 			hideOnTransparent: true,
-// 			progressiveLoad: true,
-// 		},
-// 	});
-
-// 	lottie.loadAnimation({
-// 		container: document.querySelector('#camp_fire') as HTMLElement,
-// 		renderer: 'svg',
-// 		loop: true,
-// 		autoplay: true,
-// 		path: `${import.meta.env.VITE_Lottie_FIRE}`,
-// 		rendererSettings: {
-// 			preserveAspectRatio: 'xMidYMid slice',
-// 			hideOnTransparent: true,
-// 			progressiveLoad: true,
-// 		},
-// 	});
-
-// 	lottie.loadAnimation({
-// 		container: document.querySelector('#moon') as HTMLElement,
-// 		renderer: 'svg',
-// 		loop: true,
-// 		autoplay: true,
-// 		path: `${import.meta.env.VITE_Lottie_MOON}`,
-// 		rendererSettings: {
-// 			preserveAspectRatio: 'xMidYMid slice',
-// 			hideOnTransparent: true,
-// 			progressiveLoad: true,
-// 		},
-// 	});
-// });
-
-// onBeforeUnmount(() => {
-// 	lottie.destroy();
-// });
 </script>
